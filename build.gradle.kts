@@ -140,11 +140,10 @@ tasks {
     }
   }
 
+
   runIde {
     autoReloadPlugins.set(true) // 如果你不希望插件在IDE运行期间自动重新加载，则可以将此设置为false
   }
-
-
 
   // Configure UI tests plugin
   // Read more: https://github.com/JetBrains/intellij-ui-test-robot
@@ -161,16 +160,27 @@ tasks {
     password = environment("PRIVATE_KEY_PASSWORD")
   }
 
-  publishPlugin {
-    dependsOn("patchChangelog")
-    token = environment("PUBLISH_TOKEN")
-    // The pluginVersion is based on the SemVer (https://semver.org) and supports pre-release labels, like 2.1.7-alpha.3
-    // Specify pre-release label to publish the plugin in a custom Release Channel automatically. Read more:
-    // https://plugins.jetbrains.com/docs/intellij/deployment.html#specifying-a-release-channel
-    channels = properties("pluginVersion").map {
-      listOf(
-        it.split('-').getOrElse(1) { "default" }.split('.').first()
-      )
+//  publishPlugin {
+//    dependsOn("patchChangelog")
+//    token = environment("PUBLISH_TOKEN")
+//    // The pluginVersion is based on the SemVer (https://semver.org) and supports pre-release labels, like 2.1.7-alpha.3
+//    // Specify pre-release label to publish the plugin in a custom Release Channel automatically. Read more:
+//    // https://plugins.jetbrains.com/docs/intellij/deployment.html#specifying-a-release-channel
+//    channels = properties("pluginVersion").map {
+//      listOf(
+//        it.split('-').getOrElse(1) { "default" }.split('.').first()
+//      )
+//    }
+//  }
+
+
+  jar {
+    from("dist") {
+      into("resource")
     }
   }
+//  jar {
+//      exclude("dist/**")
+//  }
+
 }

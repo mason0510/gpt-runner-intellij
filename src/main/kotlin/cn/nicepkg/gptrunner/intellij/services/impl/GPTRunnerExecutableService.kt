@@ -17,17 +17,16 @@ class GPTRunnerExecutableService : AbstractService(),
   IGPTRunnerExecutableService {
   override val userHome = SystemUtils.getUserHome().toPath()
   override val gptRunnerExecutablesDir = userHome.resolve(".gpt-runner")
-  override val gptRunnerExecutableDir =
-    gptRunnerExecutablesDir.resolve("GPT-Runner-${plugin.version}")
+  override val gptRunnerExecutableDir = gptRunnerExecutablesDir.resolve("GPT-Runner-${plugin.version}")
 
-//  init {
-//    if (gptRunnerExecutableDir.notExists()) {
-//      gptRunnerExecutableDir.createDirectories()
-//      unzipGPTRunnerExecutable()
-//    } else if (gptRunnerExecutableDir.listDirectoryEntries().isEmpty()) {
-//      unzipGPTRunnerExecutable()
-//    }
-//  }
+    init {
+    if (gptRunnerExecutableDir.notExists()) {
+      gptRunnerExecutableDir.createDirectories()
+      unzipMyGPTRunnerExecutable()
+    } else if (gptRunnerExecutableDir.listDirectoryEntries().isEmpty()) {
+      unzipMyGPTRunnerExecutable()
+    }
+  }
 
   private fun unzipGPTRunnerExecutable() {
     ZipInputStream(javaClass.getResourceAsStream("/dist.zip")!!).use { zis ->
@@ -43,6 +42,29 @@ class GPTRunnerExecutableService : AbstractService(),
           if (!toFile.parent.exists()) toFile.parent.createDirectories()
           Files.copy(zis, toFile, StandardCopyOption.REPLACE_EXISTING)
         }
+      }
+    }
+  }
+
+  private fun unzipMyGPTRunnerExecutable() {
+    ZipInputStream(javaClass.getResourceAsStream("/dist.zip")!!).use { zis ->
+      var entry: ZipEntry? = zis.nextEntry
+      while (entry != null) {
+        val filePathStr = entry.name.removePrefix("dist/")
+        val fileToWrite = gptRunnerExecutableDir.resolve(filePathStr)
+
+        if (entry.isDirectory) {
+          if (!fileToWrite.exists()) {
+            Files.createDirectories(fileToWrite)
+          }
+        } else {
+          // Make sure that parent directory exists
+          Files.createDirectories(fileToWrite.parent)
+          // Write the file
+          Files.copy(zis, fileToWrite, StandardCopyOption.REPLACE_EXISTING)
+        }
+
+        entry = zis.nextEntry
       }
     }
   }

@@ -7,6 +7,7 @@ import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
 import com.intellij.openapi.project.Project
 import kotlinx.coroutines.*
+import java.io.File
 import kotlin.concurrent.thread
 
 // TODO: 需要提供几个action去启动/停止server
@@ -19,7 +20,7 @@ class GPTRunnerService(project: Project) : AbstractService(),
   private var inputFlowJob: Job? = null
   private var errorFlowJob: Job? = null
 
-  private var _port = 13000
+  private var _port = 3003
   override val port: Int
     get() = _port
 
@@ -36,17 +37,25 @@ class GPTRunnerService(project: Project) : AbstractService(),
 
   @OptIn(ObsoleteCoroutinesApi::class)
   override suspend fun startNodeServer() {
+    println("node start!")
     if (process?.isAlive == true || _isStarted) return
+    //here we unzip or create.
     runBlocking {
+      val nodePath = "/Users/houzi/.nvm/versions/node/v16.16.0/bin/node" // replace this with your actual Node.js path
+//      val serverScript = executableService.gptRunnerExecutableDir.resolve("start-server.cjs").toString()
+      val serverScriptDir = "/Users/houzi/.gpt-runner/GPT-Runner-0.0.1/dist/start-server.cjs"
+      //转成File
+      val myServerScriptDir = File(serverScriptDir)
       process = ProcessBuilder(
-        "node",
-        "start-server.mjs",
+        nodePath,
+        "start-server.cjs",
         "--port",
         port.toString(),
         "--client-dist-path",
         "browser"
-      ).directory(executableService.gptRunnerExecutableDir.toFile())
+      ).directory(executableService.gptRunnerExecutableDir.toFile())  // Update this line
         .start()
+      _isStarted = true
       _isStarted = true
 
       inputFlowJob =
@@ -81,6 +90,7 @@ class GPTRunnerService(project: Project) : AbstractService(),
   }
 
   override suspend fun closeNodeServer() {
+    println("service close!")
     inputFlowJob?.cancel()
     errorFlowJob?.cancel()
     process?.destroyForcibly()
