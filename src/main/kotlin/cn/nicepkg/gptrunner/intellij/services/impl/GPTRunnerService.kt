@@ -9,6 +9,7 @@ import com.intellij.openapi.project.Project
 import kotlinx.coroutines.*
 import java.io.File
 import kotlin.concurrent.thread
+import java.io.BufferedReader
 
 // TODO: 需要提供几个action去启动/停止server
 class GPTRunnerService(project: Project) : AbstractService(),
@@ -41,11 +42,8 @@ class GPTRunnerService(project: Project) : AbstractService(),
     if (process?.isAlive == true || _isStarted) return
     //here we unzip or create.
     runBlocking {
-      val nodePath = "/Users/houzi/.nvm/versions/node/v16.16.0/bin/node" // replace this with your actual Node.js path
-//      val serverScript = executableService.gptRunnerExecutableDir.resolve("start-server.cjs").toString()
-      val serverScriptDir = "/Users/houzi/.gpt-runner/GPT-Runner-0.0.1/dist/start-server.cjs"
-      //转成File
-      val myServerScriptDir = File(serverScriptDir)
+      val nodePath = getNodePath();
+      println("oh-nodePath: $nodePath")
       process = ProcessBuilder(
         nodePath,
         "start-server.cjs",
@@ -101,4 +99,20 @@ class GPTRunnerService(project: Project) : AbstractService(),
     Runtime.getRuntime().removeShutdownHook(shutdownHook)
     runBlocking { closeNodeServer() }
   }
+
+  private fun getNodePath(): String? {
+    return "/Users/houzi/.nvm/versions/node/v16.16.0/bin/node"
+  }
+//private fun getNodePath(): String? {
+//  val process: Process
+//  return try {
+//    process = Runtime.getRuntime().exec("which node")
+//    val reader = BufferedReader(InputStreamReader(process.inputStream))
+//    reader.readLine()
+//  } catch (e: Exception) {
+//    e.printStackTrace()
+//    null
+//  }
+//}
+
 }
