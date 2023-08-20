@@ -3,13 +3,21 @@ package cn.nicepkg.gptrunner.intellij.services.impl
 import cn.nicepkg.gptrunner.intellij.services.AbstractService
 import cn.nicepkg.gptrunner.intellij.services.IGPTRunnerExecutableService
 import cn.nicepkg.gptrunner.intellij.services.IGPTRunnerService
+import com.intellij.codeInsight.hint.HintManager
+import com.intellij.ide.DataManager
+import com.intellij.notification.NotificationDisplayType
+import com.intellij.notification.NotificationGroup
+import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.components.service
 import com.intellij.openapi.diagnostic.thisLogger
+import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.project.Project
+import com.intellij.openapi.project.ProjectManager
 import kotlinx.coroutines.*
 import java.io.File
 import kotlin.concurrent.thread
-import java.io.BufferedReader
+import com.intellij.openapi.actionSystem.CommonDataKeys
+
 
 // TODO: 需要提供几个action去启动/停止server
 class GPTRunnerService(project: Project) : AbstractService(),
@@ -21,7 +29,7 @@ class GPTRunnerService(project: Project) : AbstractService(),
   private var inputFlowJob: Job? = null
   private var errorFlowJob: Job? = null
 
-  private var _port = 3003
+  private var _port = 13000
   override val port: Int
     get() = _port
 
@@ -42,10 +50,13 @@ class GPTRunnerService(project: Project) : AbstractService(),
     if (process?.isAlive == true || _isStarted) return
     //here we unzip or create.
     runBlocking {
-      val nodePath = getNodePath();
-      println("oh-nodePath: $nodePath")
+      val getMyNodePath = getMyNodePath();
+      if (getMyNodePath.isNullOrEmpty()) {
+        println("oh-nodePath error: $getMyNodePath")
+      } else {
+      println("oh-nodePath: $getMyNodePath")
       process = ProcessBuilder(
-        nodePath,
+        getMyNodePath,
         "start-server.cjs",
         "--port",
         port.toString(),
@@ -53,7 +64,6 @@ class GPTRunnerService(project: Project) : AbstractService(),
         "browser"
       ).directory(executableService.gptRunnerExecutableDir.toFile())  // Update this line
         .start()
-      _isStarted = true
       _isStarted = true
 
       inputFlowJob =
@@ -85,6 +95,7 @@ class GPTRunnerService(project: Project) : AbstractService(),
         runBlocking { closeNodeServer() }
       }
     }
+    }
   }
 
   override suspend fun closeNodeServer() {
@@ -100,19 +111,60 @@ class GPTRunnerService(project: Project) : AbstractService(),
     runBlocking { closeNodeServer() }
   }
 
-  private fun getNodePath(): String? {
-    return "/Users/houzi/.nvm/versions/node/v16.16.0/bin/node"
+
+  fun getMyNodePath(): String {
+    val osName = System.getProperty("os.name").toLowerCase()
+    if (osName.contains("mac") || osName.contains("nix") || osName.contains("nux")) {
+      val nodePath = getNodePath()
+      if (nodePath != null) {
+        println("Found node at: $nodePath")
+        return nodePath;
+      } else {
+        println("Node not found")
+      }
+      return "/usr/local/bin/node" // macOS, Linux默认路径
+    } else if (osName.contains("win")) {
+      val commonPathsWindows = listOf("C:/Program Files/nodejs", "C:/Program Files (x86)/nodejs")
+      for (path in commonPathsWindows) {
+        val nodePath = "$path/node.exe"
+        if (File(nodePath).exists()) {
+          return nodePath
+        }
+      }
+
+      return "C:/Program Files/nodejs/node.exe" // Windows默认路径
+    } else {
+      throw UnsupportedOperationException("Unsupported OS: $osName")
+    }
   }
-//private fun getNodePath(): String? {
-//  val process: Process
-//  return try {
-//    process = Runtime.getRuntime().exec("which node")
-//    val reader = BufferedReader(InputStreamReader(process.inputStream))
-//    reader.readLine()
-//  } catch (e: Exception) {
-//    e.printStackTrace()
-//    null
-//  }
-//}
+
+  val commonPathsWindows = listOf("C:/Program Files/nodejs", "C:/Program Files (x86)/nodejs")
+  val commonPaths = listOf("/usr/local/bin", "/usr/bin", "/bin")
+  fun getNodePathWindows(): String? {
+    for (path in commonPathsWindows) {
+      val nodePath = "$path/node.exe"
+      if (File(nodePath).exists()) {
+        return nodePath
+      }
+    }
+    return null
+  }
+
+  fun getNodePath(): String? {
+    for (path in commonPaths) {
+      val nodePath = "$path/node"
+      if (File(nodePath).exists()) {
+        return nodePath
+      }
+    }
+    return null
+  }
+
+  // 在插件初始化或类中创建通知组
+  private val NOTIFICATION_GROUP = NotificationGroup(
+    "NodeJSNotFound",
+    NotificationDisplayType.BALLOON,
+    true
+  )
 
 }
