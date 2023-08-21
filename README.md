@@ -368,3 +368,13 @@ val isDir = nextEntry!!.isDirectory
     }
 }
 }
+
+
+用户的node
+pkg start-server.cjs --targets node16-macos-x64 --output server-executable
+
+用户的node
+pkg start-server.cjs --targets node16-macos-x64 --output server-executable
+
+用户arm
+--targets node16-macos-arm64
