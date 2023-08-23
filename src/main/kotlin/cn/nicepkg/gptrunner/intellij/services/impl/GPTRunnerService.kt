@@ -55,25 +55,24 @@ class GPTRunnerService(project: Project) : AbstractService(),
         println("oh-nodePath error: $getMyNodePath")
       } else {
       println("oh-nodePath: $getMyNodePath")
-//      process = ProcessBuilder(
-//        getMyNodePath,
-//        "start-server.cjs",
-//        "--port",
-//        port.toString(),
-//        "--client-dist-path",
-//        "browser"
-//      ).directory(executableService.gptRunnerExecutableDir.toFile())  // Update this line
-//        .start()
-        val serverExecutablePath = executableService.gptRunnerExecutableDir.toFile().path+"/server-executable";
-
-        process = ProcessBuilder(
-          serverExecutablePath,
-          "--port",
-          port.toString(),
-          "--client-dist-path",
-          "browser"
-        ).directory(executableService.gptRunnerExecutableDir.toFile())  // Update this line
-          .start()
+      process = ProcessBuilder(
+        getMyNodePath,
+        "start-server.cjs",
+        "--port",
+        port.toString(),
+        "--client-dist-path",
+        "browser"
+      ).directory(executableService.gptRunnerExecutableDir.toFile())  // Update this line
+        .start()
+//        val serverExecutablePath = executableService.gptRunnerExecutableDir.toFile().path+"/server-executable";
+//        process = ProcessBuilder(
+//          serverExecutablePath,
+//          "--port",
+//          port.toString(),
+//          "--client-dist-path",
+//          "browser"
+//        ).directory(executableService.gptRunnerExecutableDir.toFile())  // Update this line
+//          .start()
 
       _isStarted = true
 
