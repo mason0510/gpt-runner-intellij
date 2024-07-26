@@ -15,6 +15,8 @@ plugins {
   alias(libs.plugins.qodana) // Gradle Qodana Plugin
   alias(libs.plugins.kover) // Gradle Kover Plugin
   alias(libs.plugins.nodeGradle) // Gradle Node Plugin
+//  id("org.jetbrains.intellij") version "1.13.3" // 使用兼容的版本
+
 }
 
 group = properties("pluginGroup").get()
@@ -25,16 +27,26 @@ repositories {
   mavenCentral()
 }
 
+
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
 //    implementation(libs.annotations)
   implementation(libs.coroutines)
+  implementation(kotlin("script-runtime"))
+  testImplementation(kotlin("script-runtime"))
+  testImplementation(kotlin("test"))
 }
 
 // Set the JVM language level used to build the project. Use Java 11 for 2020.3+, and Java 17 for 2022.2+.
+java {
+  sourceCompatibility = JavaVersion.VERSION_17
+  targetCompatibility = JavaVersion.VERSION_17
+}
+
 kotlin {
   jvmToolchain(17)
 }
+
 
 // Configure Gradle IntelliJ Plugin - read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
@@ -94,7 +106,7 @@ val buildGPTRunnerWebClientTask = tasks.register("buildGPTRunnerWebClient", Pnpm
 
 val runGPTRunnerServerTask = tasks.register("runGPTRunnerServerTask", NodeTask::class) {
   dependsOn(tasks.pnpmInstall)
-  script.set(File("../gpt-runner-web/dist/start-server.mjs"))
+  script.set(File("../gpt-runner-web/dist/start-server.cjs"))
 }
 
 tasks.withType<JavaCompile>().configureEach {

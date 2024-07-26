@@ -52,7 +52,7 @@ class GPTRunnerService(project: Project) : AbstractService(),
     runBlocking {
       val getMyNodePath = getMyNodePath();
       if (getMyNodePath.isNullOrEmpty()) {
-        println("oh-nodePath error: $getMyNodePath")
+        println("oh-nodePath error")
       } else {
       println("oh-nodePath: $getMyNodePath")
       process = ProcessBuilder(

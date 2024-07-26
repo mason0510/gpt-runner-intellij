@@ -378,3 +378,12 @@ pkg start-server.cjs --targets node16-macos-x64 --output server-executable
 
 用户arm
 --targets node16-macos-arm64
+
+idea版本下载 如果使用2021.3月份sdk 对应的版本也应该改变
+https://plugins.jetbrains.com/plugin/6954-kotlin/versions/stable
+2022.2.2-api17
+
+目前版本Kotlin
+213-1.8.10-release-430-IJ6777.52
+2021.3.2 — 2021.3.3
+Feb 02, 2023

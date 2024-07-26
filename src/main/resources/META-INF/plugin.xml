@@ -6,6 +6,8 @@
 
   <depends>com.intellij.modules.platform</depends>
 
+  <idea-version since-build="222.3345" until-build="222.*"/>
+
   <resource-bundle>messages.LangBundle</resource-bundle>
 
   <extensions defaultExtensionNs="com.intellij">
