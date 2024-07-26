@@ -54,62 +54,51 @@ class GPTRunnerService(project: Project) : AbstractService(),
       if (getMyNodePath.isNullOrEmpty()) {
         println("oh-nodePath error")
       } else {
-      println("oh-nodePath: $getMyNodePath")
-      process = ProcessBuilder(
-        getMyNodePath,
-        "start-server.cjs",
-        "--port",
-        port.toString(),
-        "--client-dist-path",
-        "browser"
-      ).directory(executableService.gptRunnerExecutableDir.toFile())  // Update this line
-        .start()
-//        val serverExecutablePath = executableService.gptRunnerExecutableDir.toFile().path+"/server-executable";
-//        process = ProcessBuilder(
-//          serverExecutablePath,
-//          "--port",
-//          port.toString(),
-//          "--client-dist-path",
-//          "browser"
-//        ).directory(executableService.gptRunnerExecutableDir.toFile())  // Update this line
-//          .start()
+        println("oh-nodePath: $getMyNodePath")
+        process = ProcessBuilder(
+          getMyNodePath,
+          "start-server.cjs",
+          "--port",
+          port.toString(),
+          "--client-dist-path",
+          "browser"
+        ).directory(executableService.gptRunnerExecutableDir.toFile())  // Update this line
+          .start()
+        _isStarted = true
 
-      _isStarted = true
-
-      inputFlowJob =
-        launch(newSingleThreadContext("processInputFlowJob${process!!.pid()}")) {
-          val inputReader = process?.inputReader()
-          while (process?.isAlive == true && inputReader != null) {
-            val line = inputReader.readLines()
-            thisLogger().info("process input line:  $line")
+        inputFlowJob =
+          launch(newSingleThreadContext("processInputFlowJob${process!!.pid()}")) {
+            val inputReader = process?.inputReader()
+            while (process?.isAlive == true && inputReader != null) {
+              val line = inputReader.readLines()
+              thisLogger().info("process input line:  $line")
+            }
           }
-        }
-      errorFlowJob =
-        launch(newSingleThreadContext("processErrorFlowJob${process!!.pid()}")) {
-          val errorReader = process?.errorReader()
-          while (process?.isAlive == true && errorReader != null) {
-            val line = errorReader.readLines()
-            thisLogger().info("process input line:  $line")
+        errorFlowJob =
+          launch(newSingleThreadContext("processErrorFlowJob${process!!.pid()}")) {
+            val errorReader = process?.errorReader()
+            while (process?.isAlive == true && errorReader != null) {
+              val line = errorReader.readLines()
+              thisLogger().info("process input line:  $line")
+            }
           }
-        }
 
-      process!!.onExit().whenCompleteAsync { t, u ->
-        val err = t.errorReader().readText()
-        thisLogger().info("process exit value: ${t.exitValue()}")
-        thisLogger().error(err, u)
-        if (err.contains("address already in use")) {
-          _port++
-          runBlocking { startNodeServer() }
-          return@whenCompleteAsync
+        process!!.onExit().whenCompleteAsync { t, u ->
+          val err = t.errorReader().readText()
+          thisLogger().info("process exit value: ${t.exitValue()}")
+          thisLogger().error(err, u)
+          if (err.contains("address already in use")) {
+            _port++
+            runBlocking { startNodeServer() }
+            return@whenCompleteAsync
+          }
+          runBlocking { closeNodeServer() }
         }
-        runBlocking { closeNodeServer() }
       }
-    }
     }
   }
 
   override suspend fun closeNodeServer() {
-    println("service close!")
     inputFlowJob?.cancel()
     errorFlowJob?.cancel()
     process?.destroyForcibly()
