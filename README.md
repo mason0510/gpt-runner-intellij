@@ -25,7 +25,7 @@ Then visit [http://localhost:3003](http://localhost:3003) in your browser.
 
 ### 2. VSCode Extension Method
 
-Install the GPT-Runner-INTELLIJ VSCode extension.
+Install the GPT-Runner-INTELLIJ extension.
 
 ## Documentation
 

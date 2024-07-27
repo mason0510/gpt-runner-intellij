@@ -25,7 +25,7 @@ npx gptr
 
 ### 2. VSCode 扩展方法
 
-安装 GPT-Runner-INTELLIJ VSCode 扩展。
+安装 GPT-Runner-INTELLIJ 扩展。
 
 ## 文档
 
