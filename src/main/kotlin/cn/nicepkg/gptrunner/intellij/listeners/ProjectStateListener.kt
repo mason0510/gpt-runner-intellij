@@ -10,7 +10,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlin.concurrent.thread
 
-class ProjectStateListener : ProjectManagerListener {
+class ProjectStateListener : ProjectManagerListener {//监听打开和关闭项目
   override fun projectOpened(project: Project) {
     thisLogger().debug("project: ${project.name}")
     thisLogger().debug("project.isInitialized: ${project.isInitialized}")
