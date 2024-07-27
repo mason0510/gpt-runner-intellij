@@ -27,9 +27,9 @@ npx gptr
 ```
 Then visit [http://localhost:3003](http://localhost:3003) in your browser.
 
-### 2. VSCode Extension Method
+### 2. INTELLIJ 
 
-Install the GPT-Runner-INTELLIJ extension.
+Install the GPT-Runner-INTELLIJ.
 
 ## Documentation
 
