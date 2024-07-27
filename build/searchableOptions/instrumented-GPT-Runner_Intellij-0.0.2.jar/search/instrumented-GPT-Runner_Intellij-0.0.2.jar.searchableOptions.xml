@@ -1,0 +1,19 @@
+<options>
+  <configurable id="preferences.keymap" configurable_name="Keymap">
+    <option name="" path="ActionManager" hit="" />
+    <option name="editor" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+    <option name="gpt" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+    <option name="in" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+    <option name="mode" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+    <option name="open" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+    <option name="runner" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+  </configurable>
+  <configurable id="cn.nicepkg.gptrunner.intellij.NodeJsPathConfigurable" configurable_name="Node.js Path">
+    <option name="gpt" hit="GPT-RUNNER Path:" />
+    <option name="path" hit="GPT-RUNNER Path:" />
+    <option name="runner" hit="GPT-RUNNER Path:" />
+    <option name="js" hit="Node.js Path" />
+    <option name="node" hit="Node.js Path" />
+    <option name="path" hit="Node.js Path" />
+  </configurable>
+</options>

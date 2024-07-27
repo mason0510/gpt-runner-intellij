@@ -11,13 +11,9 @@ import com.intellij.ui.jcef.JBCefBrowser
 import com.intellij.ui.jcef.executeJavaScriptAsync
 
 class GPTRunnerWindow(project: Project, disposable: Disposable) {
-//  private val jBCefBrowser =
-//    JBCefBrowser("http://localhost:${project.service<IGPTRunnerService>().port}/#/chat?rootPath=${project.basePath}").apply {}
+  private val jBCefBrowser =
+    JBCefBrowser("http://localhost:${project.service<IGPTRunnerService>().port}/#/chat?rootPath=${project.basePath}").apply {}
 
-//  /     val jBCefBrowser =
-//    JBCefBrowser("https://www.baidu.com").apply {}
-private val jBCefBrowser =
-  JBCefBrowser("http://localhost:3003").apply {}
 
   init {
     ApplicationManager.getApplication().messageBus.connect(disposable)

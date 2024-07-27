@@ -1,0 +1,8 @@
+/Users/houzi/home/ai-labs/gpt-runner-intellij/build/kover/raw-reports/test.ic
+false
+false
+true
+false
+-exclude
+android\..*
+com\.android\..*

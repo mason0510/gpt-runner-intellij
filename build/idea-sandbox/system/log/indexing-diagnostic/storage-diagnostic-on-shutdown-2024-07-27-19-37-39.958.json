@@ -1,0 +1,87 @@
+{
+  "pageCacheStats" : {
+    "cachedChannelsStatistics" : {
+      "hit" : 608,
+      "miss" : 0,
+      "load" : 112,
+      "capacity" : 400
+    },
+    "uncachedFileAccess" : 510,
+    "maxRegisteredFiles" : 967,
+    "maxCacheSizeInBytes" : 350904320,
+    "pageHit" : 57255,
+    "pageFastCacheHit" : 9769147,
+    "pageMiss" : 0,
+    "pageLoad" : 814,
+    "disposedBuffers" : 337,
+    "capacityInBytes" : 524288000
+  },
+  "vfsStorageStats" : {
+    "statsPerEnumerator" : {
+      "contentHashes.dat" : {
+        "collisions" : 0,
+        "values" : 7,
+        "dataFileSizeInBytes" : 140,
+        "storageSizeInBytes" : 96,
+        "btreeStatistics" : {
+          "pages" : 1,
+          "elements" : 7,
+          "height" : 1,
+          "moves" : 0,
+          "leafPages" : 1,
+          "maxSearchStepsInRequest" : 0,
+          "searchRequests" : 13,
+          "searchSteps" : 0,
+          "pageCapacity" : 32768,
+          "sizeInBytes" : 32768
+        }
+      },
+      "names.dat" : {
+        "collisions" : 4,
+        "values" : 76411,
+        "dataFileSizeInBytes" : 2289567,
+        "storageSizeInBytes" : 160,
+        "btreeStatistics" : {
+          "pages" : 33,
+          "elements" : 76408,
+          "height" : 2,
+          "moves" : 257,
+          "leafPages" : 32,
+          "maxSearchStepsInRequest" : 81,
+          "searchRequests" : 278640,
+          "searchSteps" : 405595,
+          "pageCapacity" : 32768,
+          "sizeInBytes" : 1081344
+        }
+      }
+    }
+  },
+  "indexStorageStats" : {
+    "indexStoragesStats" : { }
+  },
+  "otherStorageStats" : {
+    "statsPerPhm" : {
+      "$USER_HOME$/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/system/frameworks/detection/untitled6.c3f6619b/files" : {
+        "persistentEnumeratorStatistics" : {
+          "collisions" : 0,
+          "values" : 0,
+          "dataFileSizeInBytes" : 0,
+          "storageSizeInBytes" : 96,
+          "btreeStatistics" : {
+            "pages" : 0,
+            "elements" : 0,
+            "height" : 0,
+            "moves" : 0,
+            "leafPages" : 1,
+            "maxSearchStepsInRequest" : 0,
+            "searchRequests" : 0,
+            "searchSteps" : 0,
+            "pageCapacity" : 32768,
+            "sizeInBytes" : 0
+          }
+        },
+        "valueStorageSizeInBytes" : 0
+      }
+    }
+  }
+}
