@@ -1,1 +1,1 @@
-//rootProject.name = "GPT-Runner_Intellij"
+rootProject.name = "GPT-Runner_Intellij"

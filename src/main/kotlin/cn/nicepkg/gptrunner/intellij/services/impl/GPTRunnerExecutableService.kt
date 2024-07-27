@@ -6,44 +6,44 @@ import org.apache.commons.lang3.SystemUtils
 import java.io.File
 import java.nio.file.Files
 import java.nio.file.StandardCopyOption
-import java.nio.file.attribute.FileAttribute
 import java.util.zip.ZipEntry
 import java.util.zip.ZipInputStream
 import kotlin.io.path.*
-import kotlin.reflect.jvm.internal.impl.builtins.StandardNames.FqNames.target
 
-
-class GPTRunnerExecutableService : AbstractService(),
-  IGPTRunnerExecutableService {
+class GPTRunnerExecutableService : AbstractService(), IGPTRunnerExecutableService {
   override val userHome = SystemUtils.getUserHome().toPath()
   override val gptRunnerExecutablesDir = userHome.resolve(".gpt-runner")
-  override val gptRunnerExecutableDir =
-    gptRunnerExecutablesDir.resolve("GPT-Runner-${plugin.version}")
+  override val gptRunnerExecutableDir = gptRunnerExecutablesDir.resolve("GPT-Runner-${plugin.version}")
 
-//  init {
-//    if (gptRunnerExecutableDir.notExists()) {
-//      gptRunnerExecutableDir.createDirectories()
-//      unzipGPTRunnerExecutable()
-//    } else if (gptRunnerExecutableDir.listDirectoryEntries().isEmpty()) {
-//      unzipGPTRunnerExecutable()
-//    }
-//  }
+  init {
+    if (gptRunnerExecutableDir.notExists() || gptRunnerExecutableDir.listDirectoryEntries().isEmpty()) {
+      gptRunnerExecutableDir.createDirectories()
+      unzipGPTRunnerExecutable()
+    }
+  }
 
   private fun unzipGPTRunnerExecutable() {
-    ZipInputStream(javaClass.getResourceAsStream("/dist.zip")!!).use { zis ->
-      var nextEntry: ZipEntry?
-      while (zis.nextEntry.also { nextEntry = it } != null) {
-        val name: String = nextEntry!!.name
-        val isDir = nextEntry!!.isDirectory
+    javaClass.getResourceAsStream("/dist.zip")?.use { inputStream ->
+      ZipInputStream(inputStream.buffered()).use { zis ->
+        var entry: ZipEntry? = zis.nextEntry
+        while (entry != null) {
+          val name = entry.name.removePrefix("dist/")
+          val toFile = gptRunnerExecutableDir.resolve(name).normalize()
 
-        val toFile = gptRunnerExecutableDir.resolve(name).normalize()
-        if (isDir && !toFile.exists()) {
-          toFile.createDirectories()
-        } else {
-          if (!toFile.parent.exists()) toFile.parent.createDirectories()
-          Files.copy(zis, toFile, StandardCopyOption.REPLACE_EXISTING)
+          if (!toFile.startsWith(gptRunnerExecutableDir)) {
+            throw SecurityException("Entry is outside of the target dir: ${entry.name}")
+          }
+
+          if (entry.isDirectory) {
+            Files.createDirectories(toFile)
+          } else {
+            Files.createDirectories(toFile.parent)
+            Files.copy(zis, toFile, StandardCopyOption.REPLACE_EXISTING)
+          }
+
+          entry = zis.nextEntry
         }
       }
-    }
+    } ?: throw IllegalStateException("dist.zip not found in resources")
   }
 }

@@ -231,3 +231,5 @@ The one used in the current template project is the [Keep a Changelog][keep-a-ch
 [keep-a-changelog-how]: https://keepachangelog.com/en/1.0.0/#how
 [semver]: https://semver.org
 [xpath]: https://www.w3.org/TR/xpath-21/
+
+
