@@ -5,7 +5,7 @@
 
   <depends>com.intellij.modules.platform</depends>
 
-  <idea-version since-build="222.3345" until-build="241.*"/>
+  <idea-version since-build="213" until-build="223.*"/>
 
   <resource-bundle>messages.LangBundle</resource-bundle>
 
@@ -24,8 +24,7 @@
 
     <applicationConfigurable instance="cn.nicepkg.gptrunner.intellij.NodeJsPathConfigurable" />
 
-    <!-- 添加通知组 -->
-    <notificationGroup id="GPT Runner Notifications" displayType="BALLOON" key="notification.group.name"/>
+    <notificationGroup id="NodeJSNotFound" displayType="BALLOON" title="Node.js Not Found"/>
   </extensions>
 
   <applicationListeners>
@@ -41,6 +40,5 @@
   <actions>
     <action id="cn.nicepkg.gptrunner.intellij.actions.OpenInEditorMode" class="cn.nicepkg.gptrunner.intellij.actions.OpenInEditorMode">
     </action>
-    <!-- 你可以在这里添加更多的动作 -->
   </actions>
 </idea-plugin>

@@ -1,10 +1,12 @@
 package cn.nicepkg.gptrunner.intellij.actions
 
-import com.intellij.openapi.actionSystem.ActionUpdateThread
+import cn.nicepkg.gptrunner.intellij.services.IGPTRunnerService
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
+import com.intellij.openapi.components.service
+import com.intellij.openapi.project.Project
+import com.intellij.openapi.wm.ToolWindowManager
 
-// TODO: impl it
 class OpenInEditorMode : AnAction() {
   override fun actionPerformed(e: AnActionEvent) {
     if (e.project == null) return
@@ -18,7 +20,4 @@ class OpenInEditorMode : AnAction() {
     super.update(e)
   }
 
-  override fun getActionUpdateThread(): ActionUpdateThread {
-    return ActionUpdateThread.EDT
-  }
 }
