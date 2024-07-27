@@ -1,4 +1,3 @@
-```markdown
 # GPT-Runner-INTELLIJ
 
 GPT-Runner-INTELLIJ 是一个用于管理 AI 预设、与代码文件进行 AI 驱动的对话并提升开发效率的工具。
@@ -63,4 +62,3 @@ npx gptr
 GPT-Runner 在 MIT 许可下分发，确保自由使用、修改和分发软件。
 
 通过本指南，你将能够高效地设置和开始使用 GPT-Runner，充分利用其强大的 AI 功能来增强你的开发工作流程。
-```
