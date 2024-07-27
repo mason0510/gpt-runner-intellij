@@ -1,12 +1,11 @@
-<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
   <id>cn.nicepkg.gptrunner.intellij</id>
   <name>GPT-Runner</name>
-  <vendor>nicepkg</vendor>
+  <vendor>mason</vendor>
 
   <depends>com.intellij.modules.platform</depends>
 
-  <idea-version since-build="222.3345" until-build="222.*"/>
+  <idea-version since-build="222.3345" until-build="241.*"/>
 
   <resource-bundle>messages.LangBundle</resource-bundle>
 
