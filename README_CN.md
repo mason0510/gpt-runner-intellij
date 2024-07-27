@@ -2,6 +2,10 @@
 
 GPT-Runner-INTELLIJ 是一个用于管理 AI 预设、与代码文件进行 AI 驱动的对话并提升开发效率的工具。
 
+## Demo Video
+
+https://github.com/user-attachments/assets/ac5135b6-c39c-47ce-9528-00ec5ee1692e
+
 ## 主要功能
 
 - **与代码文件对话**：选择文件或文件夹，与 AI 实时对话。

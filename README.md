@@ -3,6 +3,10 @@
 
 GPT-Runner is a tool for managing AI presets, engaging in AI-powered conversations with your code files, and boosting development efficiency.
 
+## Demo Video
+
+https://github.com/user-attachments/assets/ac5135b6-c39c-47ce-9528-00ec5ee1692e
+
 ## Key Features
 
 - **Conversations with Code Files**: Select files or folders and engage in real-time conversations with AI.
