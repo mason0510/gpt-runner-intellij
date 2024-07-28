@@ -28,7 +28,7 @@ class GPTRunnerWindowFactory : ToolWindowFactory {
   override fun createToolWindowContent(project: Project, window: ToolWindow) {
     thisLogger().warn("Creating tool window content for project: ${project.name}")
 
-    val gptRunnerExecutableService = project.service<IGPTRunnerExecutableService>()
+    val gptRunnerExecutableService = ApplicationManager.getApplication().getService(IGPTRunnerExecutableService::class.java)
     val gptRunnerService = ApplicationManager.getApplication().getService(IGPTRunnerExecutableService::class.java)
 
     thisLogger().warn("Services initialized: Executable=${gptRunnerExecutableService != null}, Runner=${gptRunnerService != null}")

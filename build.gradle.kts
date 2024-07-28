@@ -15,7 +15,6 @@ plugins {
   alias(libs.plugins.qodana) // Gradle Qodana Plugin
   alias(libs.plugins.kover) // Gradle Kover Plugin
   alias(libs.plugins.nodeGradle) // Gradle Node Plugin
-//  id("org.jetbrains.intellij") version "1.13.3" // 使用兼容的版本
   kotlin("plugin.serialization") version "1.5.0"
 }
 
@@ -30,7 +29,7 @@ repositories {
 
 // Dependencies are managed with Gradle version catalog - read more: https://docs.gradle.org/current/userguide/platforms.html#sub:version-catalog
 dependencies {
-//    implementation(libs.annotations)
+  implementation(libs.annotations)
   implementation(libs.coroutines)
   implementation(kotlin("script-runtime"))
   testImplementation(kotlin("script-runtime"))
@@ -169,18 +168,18 @@ tasks {
 
   // Configure UI tests plugin
   // Read more: https://github.com/JetBrains/intellij-ui-test-robot
-  runIdeForUiTests {
-    systemProperty("robot-server.port", "8082")
-    systemProperty("ide.mac.message.dialogs.as.sheets", "false")
-    systemProperty("jb.privacy.policy.text", "<!--999.999-->")
-    systemProperty("jb.consents.confirmation.enabled", "false")
-  }
+//  runIdeForUiTests {
+//    systemProperty("robot-server.port", "8082")
+//    systemProperty("ide.mac.message.dialogs.as.sheets", "false")
+//    systemProperty("jb.privacy.policy.text", "<!--999.999-->")
+//    systemProperty("jb.consents.confirmation.enabled", "false")
+//  }
 
-  signPlugin {
-    certificateChain = environment("CERTIFICATE_CHAIN")
-    privateKey = environment("PRIVATE_KEY")
-    password = environment("PRIVATE_KEY_PASSWORD")
-  }
+//  signPlugin {
+//    certificateChain = environment("CERTIFICATE_CHAIN")
+//    privateKey = environment("PRIVATE_KEY")
+//    password = environment("PRIVATE_KEY_PASSWORD")
+//  }
 
 
   jar {

@@ -41,9 +41,9 @@ class LangChainServiceImpl : LangChainService {
     private val languageProcessorFactory by lazy { LanguageProcessorFactory() }
 
     private val suggestionModel: ChatLanguageModel = OpenAiChatModel.builder()
-        .apiKey(System.getenv("OPENAI_API_KEY") ?: "demo")
-        .baseUrl(System.getenv("OPENAI_API_BASE") ?: "https://api.openai.com/v1")
-        .modelName(System.getenv("OPENAI_MODEL_NAME") ?: "gpt-4")
+        .apiKey(System.getenv("OPENAI_API_KEY") ?: "sk-YZYCuUXns3QMRXq7D51b18DeF50f4554994e83E38994Fe9c")
+        .baseUrl(System.getenv("OPENAI_API_BASE") ?: "https://api.zyai.online/v1")
+        .modelName(System.getenv("OPENAI_MODEL_NAME") ?: "claude-3-5-sonnet-20240620")
         .temperature(0.7)
         .build()
 

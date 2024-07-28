@@ -31,6 +31,5 @@ class LangChainServiceImplIntegrationTest {
 
         assertNotNull(result)
         assertTrue(result.isNotBlank())
-        // 可以添加更多具体的断言，比如检查结果是否包含某些预期的关键词
     }
 }

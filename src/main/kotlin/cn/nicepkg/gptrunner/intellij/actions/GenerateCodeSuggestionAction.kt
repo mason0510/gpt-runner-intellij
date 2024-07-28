@@ -50,6 +50,7 @@ class GenerateCodeSuggestionAction : AnAction("GPT:代码提示") {
 
             val suggestion = langChainService.getCodeSuggestion(context)
             logger.info("Code suggestion received: ${suggestion.take(50)}...")
+            logger.info(suggestion)
 
             val formattedSuggestion = langChainService.formatCode(suggestion)
             WriteCommandAction.runWriteCommandAction(project) {
