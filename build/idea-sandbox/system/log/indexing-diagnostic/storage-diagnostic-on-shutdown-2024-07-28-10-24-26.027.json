@@ -1,55 +1,55 @@
 {
   "pageCacheStats" : {
     "cachedChannelsStatistics" : {
-      "hit" : 595,
+      "hit" : 579,
       "miss" : 0,
-      "load" : 106,
+      "load" : 108,
       "capacity" : 400
     },
-    "uncachedFileAccess" : 255,
+    "uncachedFileAccess" : 229,
     "maxRegisteredFiles" : 702,
-    "maxCacheSizeInBytes" : 343056384,
-    "pageHit" : 4348,
-    "pageFastCacheHit" : 1093706,
+    "maxCacheSizeInBytes" : 340967424,
+    "pageHit" : 4456,
+    "pageFastCacheHit" : 1099863,
     "pageMiss" : 0,
-    "pageLoad" : 850,
-    "disposedBuffers" : 305,
+    "pageLoad" : 849,
+    "disposedBuffers" : 303,
     "capacityInBytes" : 524288000
   },
   "vfsStorageStats" : {
     "statsPerEnumerator" : {
       "contentHashes.dat" : {
         "collisions" : 0,
-        "values" : 19,
-        "dataFileSizeInBytes" : 380,
+        "values" : 46,
+        "dataFileSizeInBytes" : 920,
         "storageSizeInBytes" : 96,
         "btreeStatistics" : {
           "pages" : 1,
-          "elements" : 19,
+          "elements" : 46,
           "height" : 1,
           "moves" : 0,
           "leafPages" : 1,
-          "maxSearchStepsInRequest" : 0,
-          "searchRequests" : 42,
-          "searchSteps" : 0,
+          "maxSearchStepsInRequest" : 1,
+          "searchRequests" : 99,
+          "searchSteps" : 2,
           "pageCapacity" : 32768,
           "sizeInBytes" : 32768
         }
       },
       "names.dat" : {
         "collisions" : 4,
-        "values" : 77708,
-        "dataFileSizeInBytes" : 2310470,
+        "values" : 77732,
+        "dataFileSizeInBytes" : 2310976,
         "storageSizeInBytes" : 160,
         "btreeStatistics" : {
           "pages" : 33,
-          "elements" : 77705,
+          "elements" : 77729,
           "height" : 2,
           "moves" : 257,
           "leafPages" : 32,
           "maxSearchStepsInRequest" : 81,
-          "searchRequests" : 286005,
-          "searchSteps" : 411053,
+          "searchRequests" : 289562,
+          "searchSteps" : 412224,
           "pageCapacity" : 32768,
           "sizeInBytes" : 1081344
         }

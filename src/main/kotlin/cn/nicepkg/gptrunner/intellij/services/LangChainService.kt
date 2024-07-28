@@ -4,4 +4,6 @@ package cn.nicepkg.gptrunner.intellij.services
 
 interface LangChainService {
     suspend fun getCodeSuggestion(context: String): String
+    fun formatCode(code: String): String
+
 }

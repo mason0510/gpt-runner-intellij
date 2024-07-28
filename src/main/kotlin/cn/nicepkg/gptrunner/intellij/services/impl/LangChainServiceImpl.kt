@@ -9,8 +9,8 @@ import kotlinx.coroutines.withContext
 
 class LangChainServiceImpl : LangChainService {
     private val model: ChatLanguageModel = OpenAiChatModel.builder()
-        .apiKey(System.getenv("OPENAI_API_KEY") ?: "sk-nLw7x3LAiORJmiJH077dB10430D7446a8d4c5eC8775971B2")
-        .baseUrl(System.getenv("OPENAI_API_BASE") ?: "https://api.zyai.online/v1")
+        .apiKey(System.getenv("OPENAI_API_KEY") ?: "demo")
+        .baseUrl(System.getenv("OPENAI_API_BASE") ?: "https")
         .modelName(System.getenv("OPENAI_MODEL_NAME") ?: "gpt-3.5-turbo")
         .temperature(0.7)
         .build()
@@ -51,4 +51,33 @@ class LangChainServiceImpl : LangChainService {
             .joinToString("\n")
             .trim()
     }
+    override fun formatCode(code: String): String {
+        val lines = code.lines()
+        val formattedLines = StringBuilder()
+        var indentLevel = 0
+        var lastNonCommentIndent = ""
+
+        lines.forEach { line ->
+            val trimmedLine = line.trim()
+            val isComment = trimmedLine.startsWith("//") || trimmedLine.startsWith("/*") || trimmedLine.startsWith("*")
+
+            if (trimmedLine.startsWith("}") || trimmedLine.startsWith(")")) {
+                indentLevel = (indentLevel - 1).coerceAtLeast(0)
+            }
+
+            val indent = if (isComment) lastNonCommentIndent else "    ".repeat(indentLevel)
+            formattedLines.append(indent).append(trimmedLine).append("\n")
+
+            if (!isComment) {
+                lastNonCommentIndent = indent
+                if (trimmedLine.endsWith("{") || trimmedLine.endsWith("(")) {
+                    indentLevel++
+                }
+            }
+        }
+
+        return formattedLines.toString().trimEnd()
+    }
+
+
 }
