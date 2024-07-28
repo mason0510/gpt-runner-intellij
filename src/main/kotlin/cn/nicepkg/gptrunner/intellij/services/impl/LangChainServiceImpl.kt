@@ -15,7 +15,10 @@ import cn.nicepkg.gptrunner.intellij.util.RetryHandler
 import cn.nicepkg.gptrunner.intellij.feedback.FeedbackCollector
 import cn.nicepkg.gptrunner.intellij.analysis.CodeAnalyzer
 import cn.nicepkg.gptrunner.intellij.lang.LanguageProcessorFactory
-
+import com.intellij.openapi.project.ProjectManager
+import com.intellij.openapi.fileEditor.FileEditorManager
+import com.intellij.openapi.fileEditor.FileDocumentManager
+import com.intellij.openapi.project.Project
 class LangChainServiceImpl : LangChainService {
     companion object {
         @Volatile
@@ -107,8 +110,30 @@ class LangChainServiceImpl : LangChainService {
             ""
         }
     }
+    // LangChainServiceImpl.kt
+    private fun getCurrentFileLanguage(): String {
+        val project: Project? = ProjectManager.getInstance().openProjects.firstOrNull()
+        if (project == null) {
+            logger.warn("No open project found")
+            return "unknown"
+        }
+        val editor = FileEditorManager.getInstance(project).selectedTextEditor
+        val file = editor?.document?.let { FileDocumentManager.getInstance().getFile(it) }
+        return when (file?.fileType?.name?.toLowerCase()) {
+            "go" -> "go"
+            "java" -> "java"
+            "kotlin" -> "kotlin"
+            else -> {
+                logger.warn("Unknown file type: ${file?.fileType?.name}")
+                "unknown"
+            }
+        }
+    }
+
 
     private suspend fun generateSuggestion(prefix: String, suffix: String): String {
+        val fileLanguage = getCurrentFileLanguage()
+        logger.info("Detected file language: $fileLanguage")
         val languageProcessor = languageProcessorFactory.getProcessor(detectLanguage(prefix))
         val processedContext = languageProcessor.processContext(prefix + suffix)
         val codeAnalysis = codeAnalyzer.analyzeContext(processedContext)
@@ -267,6 +292,7 @@ class LangChainServiceImpl : LangChainService {
 
     private fun detectLanguage(code: String): String {
         return when {
+            code.contains("package ") || code.contains("func ") || code.contains("import (") -> "go"
             code.contains("fun ") || code.contains("val ") || code.contains("var ") -> "kotlin"
             code.contains("def ") || code.contains("class ") || code.contains("import ") -> "python"
             code.contains("function ") || code.contains("var ") || code.contains("let ") -> "javascript"
@@ -277,7 +303,10 @@ class LangChainServiceImpl : LangChainService {
     fun destroy() {
         coroutineScope.cancel()
         logger.info("LangChainServiceImpl destroyed")
+        //打印helloworld
+
     }
+
 
 
 }

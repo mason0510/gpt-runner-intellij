@@ -62,3 +62,5 @@ Caused by: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLeni
 	at retrofit2.OkHttpCall.execute(OkHttpCall.java:204)
 	at dev.ai4j.openai4j.SyncRequestExecutor.execute(SyncRequestExecutor.java:23)
 	... 17 more
+2024-07-28 15:17:20,185 [   3597]   INFO - #c.n.g.i.s.i.LangChainServiceImpl - Cache miss for key: e6379ef02bc8a183cd4a75c42707edf20ba509904e73491c0869e183d6235a08
+2024-07-28 16:01:14,011 [   5913]   INFO - #c.n.g.i.s.i.LangChainServiceImpl - Cache hit for key: e6379ef02bc8a183cd4a75c42707edf20ba509904e73491c0869e183d6235a08

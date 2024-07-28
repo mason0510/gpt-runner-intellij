@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cn.nicepkg.gptrunner.intellij.services.impl.LangChainServiceImplIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-28T04:00:56" hostname="MichaeldeMacBook-Pro-4.local" time="4.963">
+<testsuite name="cn.nicepkg.gptrunner.intellij.services.impl.LangChainServiceImplIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-28T08:01:08" hostname="MichaeldeMacBook-Pro-4.local" time="5.54">
   <properties/>
-  <testcase name="testGetCodeSuggestion()" classname="cn.nicepkg.gptrunner.intellij.services.impl.LangChainServiceImplIntegrationTest" time="4.963"/>
+  <testcase name="testGetCodeSuggestion()" classname="cn.nicepkg.gptrunner.intellij.services.impl.LangChainServiceImplIntegrationTest" time="5.54"/>
   <system-out><![CDATA[Starting real API call with context: public class HelloWorld { }
 API call result: public static void main(String[] args) {
-    // 主方法，程序的入口点
-    System.out.println("你好，世界！"); // 输出"你好，世界！"到控制台
-}
-// 定义一个简单的方法
-public void greet(String name) {
-    // 打印个性化的问候语
-    System.out.println("你好，" + name + "！");
+    // 主方法，程序入口
+    System.out.println("你好，世界！");  // 打印"你好，世界！"到控制台
 }
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J bindings.
+SLF4J: Found binding in [jar:file:/Users/houzi/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.2.6/b09efa852337fa0dd9859614389eec58dc287116/logback-classic-1.2.6.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: Found binding in [jar:file:/Users/houzi/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2022.2.5/836d1896d66b8d410f65d76e8cbc910b16d9edab/ideaIC-2022.2.5/lib/3rd-party-rt.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+SLF4J: Actual binding is of type [ch.qos.logback.classic.util.ContextSelectorStaticBinder]
+]]></system-err>
 </testsuite>

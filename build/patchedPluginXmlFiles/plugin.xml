@@ -11,6 +11,7 @@ providing real-time coding assistance, automated documentation, and intelligent 
   <id>cn.nicepkg.gptrunner.intellij</id>
   <name>GPT-Runner</name>
   <vendor>nicepkg</vendor>
+  <depends>com.intellij.modules.go</depends>
   <depends>com.intellij.modules.platform</depends>
   <resource-bundle>messages.LangBundle</resource-bundle>
   <extensions defaultExtensionNs="com.intellij">

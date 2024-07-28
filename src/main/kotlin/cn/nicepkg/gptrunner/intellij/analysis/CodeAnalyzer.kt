@@ -2,7 +2,6 @@ package cn.nicepkg.gptrunner.intellij.analysis
 
 class CodeAnalyzer {
     fun analyzeContext(context: String): Map<String, Any> {
-        // 进行简单的静态分析，例如提取变量名、函数名等
         val variables = extractVariables(context)
         val functions = extractFunctions(context)
         return mapOf(

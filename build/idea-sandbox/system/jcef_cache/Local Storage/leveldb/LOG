@@ -1,9 +1,8 @@
-2024/07/28-15:03:45.713 3903 Reusing MANIFEST /Users/houzi/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/system/jcef_cache/Local Storage/leveldb/MANIFEST-000001
-2024/07/28-15:03:45.714 3903 Recovering log #3
-2024/07/28-15:03:45.715 3903 Reusing old log /Users/houzi/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/system/jcef_cache/Local Storage/leveldb/000003.log 
-2024/07/28-15:06:45.866 390f Level-0 table #5: started
-2024/07/28-15:06:45.891 390f Level-0 table #5: 21484 bytes OK
-2024/07/28-15:06:45.937 390f Delete type=0 #3
-2024/07/28-15:09:45.806 3813 Level-0 table #7: started
-2024/07/28-15:09:45.829 3813 Level-0 table #7: 18363 bytes OK
-2024/07/28-15:09:45.874 3813 Delete type=0 #4
+2024/07/28-15:13:23.945 3703 Reusing MANIFEST /Users/houzi/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/system/jcef_cache/Local Storage/leveldb/MANIFEST-000001
+2024/07/28-15:13:23.948 3703 Recovering log #6
+2024/07/28-15:13:23.949 3703 Level-0 table #9: started
+2024/07/28-15:13:23.975 3703 Level-0 table #9: 14113 bytes OK
+2024/07/28-15:13:24.025 3703 Delete type=0 #6
+2024/07/28-15:16:24.039 450b Level-0 table #12: started
+2024/07/28-15:16:24.063 450b Level-0 table #12: 15695 bytes OK
+2024/07/28-15:16:24.110 450b Delete type=0 #10
