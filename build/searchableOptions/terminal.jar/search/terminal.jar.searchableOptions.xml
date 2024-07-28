@@ -76,10 +76,6 @@
     <option name="paste" hit="Paste on middle mouse button click" />
     <option name="project" hit="Project Settings" />
     <option name="settings" hit="Project Settings" />
-    <option name="commands" hit="Run Commands using IDE" />
-    <option name="ide" hit="Run Commands using IDE" />
-    <option name="run" hit="Run Commands using IDE" />
-    <option name="using" hit="Run Commands using IDE" />
     <option name="integration" hit="Shell integration" />
     <option name="shell" hit="Shell integration" />
     <option name="path" hit="Shell path:" />

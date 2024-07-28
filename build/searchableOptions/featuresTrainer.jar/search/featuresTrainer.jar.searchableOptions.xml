@@ -34,8 +34,8 @@
   <configurable id="FeaturesTrainerSettingsPanel" configurable_name="Features Trainer">
     <option name="features" hit="Features Trainer" />
     <option name="trainer" hit="Features Trainer" />
-    <option name="java" hit="Java" />
-    <option name="kotlin" hit="Kotlin" />
+    <option name="go" hit="Go" />
+    <option name="javascript" hit="JavaScript" />
     <option name="language" hit="Learning main programming language" />
     <option name="learning" hit="Learning main programming language" />
     <option name="main" hit="Learning main programming language" />

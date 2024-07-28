@@ -1,5 +1,39 @@
 <options>
   <configurable id="preferences.keymap" configurable_name="Keymap">
     <option name="" path="ActionManager" hit="" />
+    <option name="code" path="ActionManager" hit="Convert code to Go" />
+    <option name="convert" path="ActionManager" hit="Convert code to Go" />
+    <option name="go" path="ActionManager" hit="Convert code to Go" />
+    <option name="to" path="ActionManager" hit="Convert code to Go" />
+    <option name="code" path="ActionManager" hit="Convert code to Rust" />
+    <option name="convert" path="ActionManager" hit="Convert code to Rust" />
+    <option name="rust" path="ActionManager" hit="Convert code to Rust" />
+    <option name="to" path="ActionManager" hit="Convert code to Rust" />
+    <option name="another" path="ActionManager" hit="Convert code to another programming language" />
+    <option name="code" path="ActionManager" hit="Convert code to another programming language" />
+    <option name="convert" path="ActionManager" hit="Convert code to another programming language" />
+    <option name="language" path="ActionManager" hit="Convert code to another programming language" />
+    <option name="programming" path="ActionManager" hit="Convert code to another programming language" />
+    <option name="to" path="ActionManager" hit="Convert code to another programming language" />
+    <option name="gpt" path="ActionManager" hit="GPT:代码提示" />
+    <option name="代码提示" path="ActionManager" hit="GPT:代码提示" />
+    <option name="gpt" path="ActionManager" hit="GPT:代码转换" />
+    <option name="代码转换" path="ActionManager" hit="GPT:代码转换" />
+    <option name="at" path="ActionManager" hit="Generate code suggestion at cursor position" />
+    <option name="code" path="ActionManager" hit="Generate code suggestion at cursor position" />
+    <option name="cursor" path="ActionManager" hit="Generate code suggestion at cursor position" />
+    <option name="generate" path="ActionManager" hit="Generate code suggestion at cursor position" />
+    <option name="position" path="ActionManager" hit="Generate code suggestion at cursor position" />
+    <option name="suggestion" path="ActionManager" hit="Generate code suggestion at cursor position" />
+    <option name="editor" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+    <option name="gpt" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+    <option name="in" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+    <option name="mode" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+    <option name="open" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+    <option name="runner" path="ActionManager" hit="Open GPT-Runner in Editor Mode." />
+    <option name="go" path="ActionManager" hit="转换为 Go" />
+    <option name="转换为" path="ActionManager" hit="转换为 Go" />
+    <option name="rust" path="ActionManager" hit="转换为 Rust" />
+    <option name="转换为" path="ActionManager" hit="转换为 Rust" />
   </configurable>
 </options>

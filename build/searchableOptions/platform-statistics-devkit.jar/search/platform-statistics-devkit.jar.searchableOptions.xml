@@ -29,10 +29,6 @@
     <option name="scheme" path="ActionManager" hit="Clean Up Events Test Scheme" />
     <option name="test" path="ActionManager" hit="Clean Up Events Test Scheme" />
     <option name="up" path="ActionManager" hit="Clean Up Events Test Scheme" />
-    <option name="collect" path="ActionManager" hit="Collect Statistics from Collector..." />
-    <option name="collector" path="ActionManager" hit="Collect Statistics from Collector..." />
-    <option name="from" path="ActionManager" hit="Collect Statistics from Collector..." />
-    <option name="statistics" path="ActionManager" hit="Collect Statistics from Collector..." />
     <option name="configure" path="ActionManager" hit="Configure Events Scheme File" />
     <option name="events" path="ActionManager" hit="Configure Events Scheme File" />
     <option name="file" path="ActionManager" hit="Configure Events Scheme File" />
@@ -154,10 +150,6 @@
     <option name="fus" path="ActionManager" hit="Show FUS Collectors Scheme" />
     <option name="scheme" path="ActionManager" hit="Show FUS Collectors Scheme" />
     <option name="show" path="ActionManager" hit="Show FUS Collectors Scheme" />
-    <option name="events" path="ActionManager" hit="Test Parsing Events Scheme..." />
-    <option name="parsing" path="ActionManager" hit="Test Parsing Events Scheme..." />
-    <option name="scheme" path="ActionManager" hit="Test Parsing Events Scheme..." />
-    <option name="test" path="ActionManager" hit="Test Parsing Events Scheme..." />
     <option name="events" path="ActionManager" hit="Update Events Scheme" />
     <option name="scheme" path="ActionManager" hit="Update Events Scheme" />
     <option name="update" path="ActionManager" hit="Update Events Scheme" />
