@@ -1,114 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cn.nicepkg.gptrunner.intellij.services.impl.LangChainServiceImplIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-28T01:41:50" hostname="MichaeldeMacBook-Pro-4.local" time="9.998">
+<testsuite name="cn.nicepkg.gptrunner.intellij.services.impl.LangChainServiceImplIntegrationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-07-28T04:00:56" hostname="MichaeldeMacBook-Pro-4.local" time="4.963">
   <properties/>
-  <testcase name="testGetCodeSuggestion()" classname="cn.nicepkg.gptrunner.intellij.services.impl.LangChainServiceImplIntegrationTest" time="9.998"/>
+  <testcase name="testGetCodeSuggestion()" classname="cn.nicepkg.gptrunner.intellij.services.impl.LangChainServiceImplIntegrationTest" time="4.963"/>
   <system-out><![CDATA[Starting real API call with context: public class HelloWorld { }
-Full response: Certainly! If you want to add some functionality or content to the `HelloWorld` class, here are a few suggestions based on common programming tasks:
-
-1. **Adding a Main Method**:
-   ```java
-   public class HelloWorld {
-       public static void main(String[] args) {
-           System.out.println("Hello, world!");
-       }
-   }
-   ```
-   This adds a `main` method which prints "Hello, world!" to the console when the program is executed.
-
-2. **Adding a Method to Print a Message**:
-   ```java
-   public class HelloWorld {
-       public void printMessage() {
-           System.out.println("Hello, world!");
-       }
-   }
-   ```
-   This adds a method `printMessage()` that can be called to print "Hello, world!".
-
-3. **Adding a Constructor**:
-   ```java
-   public class HelloWorld {
-       public HelloWorld() {
-           System.out.println("Hello, world!");
-       }
-   }
-   ```
-   This adds a constructor that prints "Hello, world!" when an instance of `HelloWorld` is created.
-
-4. **Adding a Method with Parameters**:
-   ```java
-   public class HelloWorld {
-       public void greet(String name) {
-           System.out.println("Hello, " + name + "!");
-       }
-   }
-   ```
-   This adds a method `greet(String name)` that takes a `name` parameter and prints a personalized greeting.
-
-5. **Adding a Static Method**:
-   ```java
-   public class HelloWorld {
-       public static void printHello() {
-           System.out.println("Hello, world!");
-       }
-   }
-   ```
-   This adds a static method `printHello()` that can be called without creating an instance of `HelloWorld`.
-
-Choose the suggestion that best fits your current needs or modify it further based on additional requirements. Each suggestion adds functionality to the `HelloWorld` class in a different way, depending on what you intend to achieve.
-API call result: Certainly! If you want to add some functionality or content to the `HelloWorld` class, here are a few suggestions based on common programming tasks:
-
-1. **Adding a Main Method**:
-   ```java
-   public class HelloWorld {
-       public static void main(String[] args) {
-           System.out.println("Hello, world!");
-       }
-   }
-   ```
-   This adds a `main` method which prints "Hello, world!" to the console when the program is executed.
-
-2. **Adding a Method to Print a Message**:
-   ```java
-   public class HelloWorld {
-       public void printMessage() {
-           System.out.println("Hello, world!");
-       }
-   }
-   ```
-   This adds a method `printMessage()` that can be called to print "Hello, world!".
-
-3. **Adding a Constructor**:
-   ```java
-   public class HelloWorld {
-       public HelloWorld() {
-           System.out.println("Hello, world!");
-       }
-   }
-   ```
-   This adds a constructor that prints "Hello, world!" when an instance of `HelloWorld` is created.
-
-4. **Adding a Method with Parameters**:
-   ```java
-   public class HelloWorld {
-       public void greet(String name) {
-           System.out.println("Hello, " + name + "!");
-       }
-   }
-   ```
-   This adds a method `greet(String name)` that takes a `name` parameter and prints a personalized greeting.
-
-5. **Adding a Static Method**:
-   ```java
-   public class HelloWorld {
-       public static void printHello() {
-           System.out.println("Hello, world!");
-       }
-   }
-   ```
-   This adds a static method `printHello()` that can be called without creating an instance of `HelloWorld`.
-
-Choose the suggestion that best fits your current needs or modify it further based on additional requirements. Each suggestion adds functionality to the `HelloWorld` class in a different way, depending on what you intend to achieve.
+API call result: public static void main(String[] args) {
+    // 主方法，程序的入口点
+    System.out.println("你好，世界！"); // 输出"你好，世界！"到控制台
+}
+// 定义一个简单的方法
+public void greet(String name) {
+    // 打印个性化的问候语
+    System.out.println("你好，" + name + "！");
+}
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

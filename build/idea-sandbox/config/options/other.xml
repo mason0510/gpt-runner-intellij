@@ -29,11 +29,18 @@
   <component name="PropertyService"><![CDATA[{
   "keyToString": {
     "CWM_LOGGING_VERSION": "1",
+    "RunOnceActivity.se.text.search": "true",
+    "build.toolwindow.Build Output.selection.state": "com.intellij.build.BuildTreeConsoleView",
     "bundled.plugins.list.saved.version": "IC-222.4554.10",
+    "eclipse.projects.detected": "",
     "fileTypeChangedCounter": "1",
     "fontSizeToResetConsole": "13.0",
     "fontSizeToResetEditor": "13.0",
+    "gotit.previous.run": "IC-222.4554.10",
+    "ide.memory.adjusted": "true",
+    "installed.kotlin.plugin.version": "222-1.7.10-release-334-IJ4554.10",
     "previousColorScheme": "_@user_Darcula",
+    "registry.to.advanced.settings.migration.build": "IC-222.4554.10",
     "tasks.pass.word.conversion.enforced": "true"
   },
   "keyToStringList": {

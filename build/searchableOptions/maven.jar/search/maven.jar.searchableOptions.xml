@@ -371,12 +371,14 @@
     <option name="" hit="-T option" />
     <option name="option" hit="-T option" />
     <option name="t" hit="-T option" />
-    <option name="" hit="/usr/local/Cellar/maven/3.9.6/libexec" />
-    <option name="cellar" hit="/usr/local/Cellar/maven/3.9.6/libexec" />
-    <option name="libexec" hit="/usr/local/Cellar/maven/3.9.6/libexec" />
-    <option name="local" hit="/usr/local/Cellar/maven/3.9.6/libexec" />
-    <option name="maven" hit="/usr/local/Cellar/maven/3.9.6/libexec" />
-    <option name="usr" hit="/usr/local/Cellar/maven/3.9.6/libexec" />
+    <option name="" hit="/Users/houzi/home/JAVA_environment/apache-maven-3.5.4" />
+    <option name="apache" hit="/Users/houzi/home/JAVA_environment/apache-maven-3.5.4" />
+    <option name="environment" hit="/Users/houzi/home/JAVA_environment/apache-maven-3.5.4" />
+    <option name="home" hit="/Users/houzi/home/JAVA_environment/apache-maven-3.5.4" />
+    <option name="houzi" hit="/Users/houzi/home/JAVA_environment/apache-maven-3.5.4" />
+    <option name="java" hit="/Users/houzi/home/JAVA_environment/apache-maven-3.5.4" />
+    <option name="maven" hit="/Users/houzi/home/JAVA_environment/apache-maven-3.5.4" />
+    <option name="users" hit="/Users/houzi/home/JAVA_environment/apache-maven-3.5.4" />
     <option name="always" hit="Always update snapshots" />
     <option name="snapshots" hit="Always update snapshots" />
     <option name="update" hit="Always update snapshots" />

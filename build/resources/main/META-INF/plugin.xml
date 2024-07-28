@@ -1,13 +1,13 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
   <description>GPT-Runner: AI-powered coding assistant for your IDE.
 Enhance productivity with intelligent suggestions and seamless integration.
 Features include code generation, documentation assistance, and more.
 Streamline your workflow and boost your coding efficiency with GPT-Runner.
 This plugin integrates advanced language models directly into your development environment,
 providing real-time coding assistance, automated documentation, and intelligent code analysis.</description>
-  <idea-version since-build="222" until-build="232.*" />
+  <idea-version since-build="222" until-build="241.*" />
   <id>cn.nicepkg.gptrunner.intellij</id>
   <name>GPT-Runner</name>
   <vendor>nicepkg</vendor>

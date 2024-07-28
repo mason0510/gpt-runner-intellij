@@ -16,7 +16,7 @@ plugins {
   alias(libs.plugins.kover) // Gradle Kover Plugin
   alias(libs.plugins.nodeGradle) // Gradle Node Plugin
 //  id("org.jetbrains.intellij") version "1.13.3" // 使用兼容的版本
-
+  kotlin("plugin.serialization") version "1.5.0"
 }
 
 group = properties("pluginGroup").get()
@@ -47,8 +47,8 @@ dependencies {
 
   // Kotlin Coroutines Test
   testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
-
-
+  implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
+  implementation("ch.qos.logback:logback-classic:1.2.6")
 
 }
 

@@ -62,8 +62,8 @@
       "isBundled": true
     },
     "*.psd": {
-      "pluginIdString": "com.intellij.platform.images",
-      "nullablePluginName": "Images",
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
       "isBundled": true
     },
     "*.js": {
@@ -162,8 +162,8 @@
       "isBundled": true
     },
     "*.apk": {
-      "pluginIdString": "com.intellij",
-      "nullablePluginName": "IDEA CORE",
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
       "isBundled": true
     },
     "*.hpp": {
@@ -349,6 +349,551 @@
     "*.aj": {
       "pluginIdString": "com.intellij",
       "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.txt": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.pptx": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.xlsx": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.pdf": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.ppt": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.vsd": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.doc": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.mdb": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.hlp": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.odt": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.xls": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.docx": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.iws": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.iml": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.ipr": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.patch": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.diff": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.ignore": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.rnc": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.htm": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.html": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.shtm": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.shtml": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.sht": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.xhtml": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.mod": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.dtd": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.ent": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.elt": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.har": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.json": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.json5": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.ndjson": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.jsonlines": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.ldjson": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.jsonl": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.regexp": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "*.dic": {
+      "pluginIdString": "com.intellij",
+      "nullablePluginName": "IDEA CORE",
+      "isBundled": true
+    },
+    "Gopkg.lock": {
+      "pluginIdString": "org.toml.lang",
+      "nullablePluginName": "Toml",
+      "isBundled": true
+    },
+    "Pipfile": {
+      "pluginIdString": "org.toml.lang",
+      "nullablePluginName": "Toml",
+      "isBundled": true
+    },
+    "Cargo.toml.orig": {
+      "pluginIdString": "org.toml.lang",
+      "nullablePluginName": "Toml",
+      "isBundled": true
+    },
+    "*.toml": {
+      "pluginIdString": "org.toml.lang",
+      "nullablePluginName": "Toml",
+      "isBundled": true
+    },
+    "Cargo.lock": {
+      "pluginIdString": "org.toml.lang",
+      "nullablePluginName": "Toml",
+      "isBundled": true
+    },
+    "poetry.lock": {
+      "pluginIdString": "org.toml.lang",
+      "nullablePluginName": "Toml",
+      "isBundled": true
+    },
+    "*.sarif": {
+      "pluginIdString": "org.intellij.qodana",
+      "nullablePluginName": "Qodana",
+      "isBundled": true
+    },
+    "*.sarif.json": {
+      "pluginIdString": "org.intellij.qodana",
+      "nullablePluginName": "Qodana",
+      "isBundled": true
+    },
+    ".editorconfig": {
+      "pluginIdString": "org.editorconfig.editorconfigjetbrains",
+      "nullablePluginName": "EditorConfig",
+      "isBundled": true
+    },
+    "*.hgignore": {
+      "pluginIdString": "hg4idea",
+      "nullablePluginName": "Mercurial",
+      "isBundled": true
+    },
+    "*.sh": {
+      "pluginIdString": "com.jetbrains.sh",
+      "nullablePluginName": "Shell Script",
+      "isBundled": true
+    },
+    "*.bash": {
+      "pluginIdString": "com.jetbrains.sh",
+      "nullablePluginName": "Shell Script",
+      "isBundled": true
+    },
+    "*.zsh": {
+      "pluginIdString": "com.jetbrains.sh",
+      "nullablePluginName": "Shell Script",
+      "isBundled": true
+    },
+    "*.svg": {
+      "pluginIdString": "com.intellij.platform.images",
+      "nullablePluginName": "Images",
+      "isBundled": true
+    },
+    "*.md": {
+      "pluginIdString": "org.intellij.plugins.markdown",
+      "nullablePluginName": "Markdown",
+      "isBundled": true
+    },
+    "*.markdown": {
+      "pluginIdString": "org.intellij.plugins.markdown",
+      "nullablePluginName": "Markdown",
+      "isBundled": true
+    },
+    "*.properties": {
+      "pluginIdString": "com.intellij.properties",
+      "nullablePluginName": "Properties",
+      "isBundled": true
+    },
+    "*.java": {
+      "pluginIdString": "com.intellij.java",
+      "nullablePluginName": "Java",
+      "isBundled": true
+    },
+    "*.class": {
+      "pluginIdString": "com.intellij.java",
+      "nullablePluginName": "Java",
+      "isBundled": true
+    },
+    "*.snippet": {
+      "pluginIdString": "com.intellij.java",
+      "nullablePluginName": "Java",
+      "isBundled": true
+    },
+    "*.kt": {
+      "pluginIdString": "org.jetbrains.kotlin",
+      "nullablePluginName": "Kotlin",
+      "isBundled": true
+    },
+    "*.kts": {
+      "pluginIdString": "org.jetbrains.kotlin",
+      "nullablePluginName": "Kotlin",
+      "isBundled": true
+    },
+    "*.knm": {
+      "pluginIdString": "org.jetbrains.kotlin",
+      "nullablePluginName": "Kotlin",
+      "isBundled": true
+    },
+    "*.kjsm": {
+      "pluginIdString": "org.jetbrains.kotlin",
+      "nullablePluginName": "Kotlin",
+      "isBundled": true
+    },
+    "*.kotlin_metadata": {
+      "pluginIdString": "org.jetbrains.kotlin",
+      "nullablePluginName": "Kotlin",
+      "isBundled": true
+    },
+    "*.kotlin_builtins": {
+      "pluginIdString": "org.jetbrains.kotlin",
+      "nullablePluginName": "Kotlin",
+      "isBundled": true
+    },
+    "*.kotlin_module": {
+      "pluginIdString": "org.jetbrains.kotlin",
+      "nullablePluginName": "Kotlin",
+      "isBundled": true
+    },
+    "*.def": {
+      "pluginIdString": "org.jetbrains.kotlin",
+      "nullablePluginName": "Kotlin",
+      "isBundled": true
+    },
+    ".classpath": {
+      "pluginIdString": "org.jetbrains.idea.eclipse",
+      "nullablePluginName": "Eclipse Interoperability",
+      "isBundled": true
+    },
+    ".project": {
+      "pluginIdString": "org.jetbrains.idea.eclipse",
+      "nullablePluginName": "Eclipse Interoperability",
+      "isBundled": true
+    },
+    "*.form": {
+      "pluginIdString": "com.intellij.uiDesigner",
+      "nullablePluginName": "UI Designer",
+      "isBundled": true
+    },
+    "*.smali": {
+      "pluginIdString": "com.android.tools.idea.smali",
+      "nullablePluginName": "Smali Support",
+      "isBundled": true
+    },
+    "*.xpath": {
+      "pluginIdString": "XPathView",
+      "nullablePluginName": "XPathView + XSLT",
+      "isBundled": true
+    },
+    "*.xpath2": {
+      "pluginIdString": "XPathView",
+      "nullablePluginName": "XPathView + XSLT",
+      "isBundled": true
+    },
+    "*.jql": {
+      "pluginIdString": "com.intellij.tasks",
+      "nullablePluginName": "Task Management",
+      "isBundled": true
+    },
+    "*.config": {
+      "pluginIdString": "Lombook Plugin",
+      "nullablePluginName": "Lombok",
+      "isBundled": true
+    },
+    "lombok.config": {
+      "pluginIdString": "Lombook Plugin",
+      "nullablePluginName": "Lombok",
+      "isBundled": true
+    },
+    "*.gant": {
+      "pluginIdString": "org.intellij.groovy",
+      "nullablePluginName": "Groovy",
+      "isBundled": true
+    },
+    "*.gy": {
+      "pluginIdString": "org.intellij.groovy",
+      "nullablePluginName": "Groovy",
+      "isBundled": true
+    },
+    "*.groovy": {
+      "pluginIdString": "org.intellij.groovy",
+      "nullablePluginName": "Groovy",
+      "isBundled": true
+    },
+    "*.gdsl": {
+      "pluginIdString": "org.intellij.groovy",
+      "nullablePluginName": "Groovy",
+      "isBundled": true
+    },
+    "org.codehaus.groovy.runtime.ExtensionModule": {
+      "pluginIdString": "org.intellij.groovy",
+      "nullablePluginName": "Groovy",
+      "isBundled": true
+    },
+    "logback.groovy": {
+      "pluginIdString": "org.intellij.groovy",
+      "nullablePluginName": "Groovy",
+      "isBundled": true
+    },
+    "*.gitignore": {
+      "pluginIdString": "Git4Idea",
+      "nullablePluginName": "Git",
+      "isBundled": true
+    },
+    "exclude": {
+      "pluginIdString": "Git4Idea",
+      "nullablePluginName": "Git",
+      "isBundled": true
+    },
+    "*.yml": {
+      "pluginIdString": "org.jetbrains.plugins.yaml",
+      "nullablePluginName": "YAML",
+      "isBundled": true
+    },
+    "*.yaml": {
+      "pluginIdString": "org.jetbrains.plugins.yaml",
+      "nullablePluginName": "YAML",
+      "isBundled": true
+    },
+    "maven.config": {
+      "pluginIdString": "org.jetbrains.idea.maven",
+      "nullablePluginName": "Maven",
+      "isBundled": true
+    },
+    "*.gradle": {
+      "pluginIdString": "org.jetbrains.plugins.gradle",
+      "nullablePluginName": "Gradle-Java",
+      "isBundled": true
+    },
+    "*.aidl": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "proguard-*.txt": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "proguard.cfg": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.pro": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.rs": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.rsh": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.fs": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "multidex-config.txt": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.android_data_binding": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.9.png": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.dex": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.aar": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.aab": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.otf": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.ttf": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.trace": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.alloc": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.heapprofd": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.perfetto-trace": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.pftrace": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.li": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
+      "isBundled": true
+    },
+    "*.lcf": {
+      "pluginIdString": "org.jetbrains.android",
+      "nullablePluginName": "Android",
       "isBundled": true
     }
   }
@@ -17388,214 +17933,314 @@
       </features>
     </option>
   </component>
-  <component name="PluginFeatureService">
-    <features>
-      <entry key="com.intellij.configurationType">
-        <features>
-          <featureMap>
-            <entry key="CompoundRunConfigurationType">
-              <featurePlugin displayName="Compound">
-                <plugin pluginId="com.intellij" pluginName="IDEA CORE" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="ShConfigurationType">
-              <featurePlugin displayName="Shell Script">
-                <plugin pluginId="com.jetbrains.sh" pluginName="Shell Script" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="GradleRunConfiguration">
-              <featurePlugin displayName="Gradle">
-                <plugin pluginId="com.intellij.gradle" pluginName="Gradle" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="Application">
-              <featurePlugin displayName="Application">
-                <plugin pluginId="com.intellij.java" pluginName="Java" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="JarApplication">
-              <featurePlugin displayName="JAR Application">
-                <plugin pluginId="com.intellij.java" pluginName="Java" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="Java Scratch">
-              <featurePlugin displayName="Java Scratch">
-                <plugin pluginId="com.intellij.java" pluginName="Java" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="Remote">
-              <featurePlugin displayName="Remote JVM Debug">
-                <plugin pluginId="com.intellij.java" pluginName="Java" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="JetRunConfigurationType">
-              <featurePlugin displayName="Kotlin">
-                <plugin pluginId="org.jetbrains.kotlin" pluginName="Kotlin" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="KotlinStandaloneScriptRunConfigurationType">
-              <featurePlugin displayName="Kotlin script">
-                <plugin pluginId="org.jetbrains.kotlin" pluginName="Kotlin" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="XSLT">
-              <featurePlugin displayName="XSLT">
-                <plugin pluginId="XPathView" pluginName="XPathView + XSLT" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="GroovyScriptRunConfiguration">
-              <featurePlugin displayName="Groovy">
-                <plugin pluginId="org.intellij.groovy" pluginName="Groovy" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="TestNG">
-              <featurePlugin displayName="TestNG">
-                <plugin pluginId="TestNG-J" pluginName="TestNG" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="JUnit">
-              <featurePlugin displayName="JUnit">
-                <plugin pluginId="JUnit" pluginName="JUnit" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="AntRunConfiguration">
-              <featurePlugin displayName="Ant Target">
-                <plugin pluginId="AntSupport" pluginName="Ant" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="MavenRunConfiguration">
-              <featurePlugin displayName="Maven">
-                <plugin pluginId="org.jetbrains.idea.maven" pluginName="Maven" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="AndroidRunConfigurationType">
-              <featurePlugin displayName="Android App">
-                <plugin pluginId="org.jetbrains.android" pluginName="Android" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="AndroidTestRunConfigurationType">
-              <featurePlugin displayName="Android Instrumented Tests">
-                <plugin pluginId="org.jetbrains.android" pluginName="Android" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="ComposePreviewRunConfiguration">
-              <featurePlugin displayName="Compose Preview">
-                <plugin pluginId="org.jetbrains.android" pluginName="Android" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-              <featurePlugin displayName="Plugin">
-                <plugin pluginId="DevKit" pluginName="Plugin DevKit" bundled="true" />
-              </featurePlugin>
-            </entry>
-          </featureMap>
-        </features>
-      </entry>
-      <entry key="dependencySupport">
-        <features>
-          <featureMap>
-            <entry key="java:org.openjfx:javafx-base">
-              <featurePlugin displayName="JavaFX">
-                <plugin pluginId="org.jetbrains.plugins.javaFX" pluginName="JavaFX" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="java:org.testng:testng">
-              <featurePlugin displayName="TestNG">
-                <plugin pluginId="TestNG-J" pluginName="TestNG" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="java:org.projectlombok:lombok">
-              <featurePlugin displayName="Lombok">
-                <plugin pluginId="Lombook Plugin" pluginName="Lombok" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="java:junit:junit">
-              <featurePlugin displayName="JUnit">
-                <plugin pluginId="JUnit" pluginName="JUnit" bundled="true" />
-              </featurePlugin>
-            </entry>
-          </featureMap>
-        </features>
-      </entry>
-      <entry key="com.intellij.facetType">
-        <features>
-          <featureMap>
-            <entry key="kotlin-language">
-              <featurePlugin displayName="Kotlin">
-                <plugin pluginId="org.jetbrains.kotlin" pluginName="Kotlin" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="android">
-              <featurePlugin displayName="Android">
-                <plugin pluginId="org.jetbrains.android" pluginName="Android" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="android-artifact">
-              <featurePlugin displayName="Android Artifact">
-                <plugin pluginId="org.jetbrains.android" pluginName="Android" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="android-gradle">
-              <featurePlugin displayName="Android-Gradle">
-                <plugin pluginId="org.jetbrains.android" pluginName="Android" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="native-android-gradle">
-              <featurePlugin displayName="Native-Android-Gradle">
-                <plugin pluginId="org.jetbrains.android" pluginName="Android" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="java-gradle">
-              <featurePlugin displayName="Java-Gradle">
-                <plugin pluginId="org.jetbrains.android" pluginName="Android" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="apk">
-              <featurePlugin displayName="APK">
-                <plugin pluginId="org.jetbrains.android" pluginName="Android" bundled="true" />
-              </featurePlugin>
-            </entry>
-          </featureMap>
-        </features>
-      </entry>
-      <entry key="com.intellij.packaging.artifacts.ArtifactType">
-        <features>
-          <featureMap>
-            <entry key="jar">
-              <featurePlugin displayName="JAR">
-                <plugin pluginId="com.intellij.java" pluginName="Java" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="jlink">
-              <featurePlugin displayName="Run-time image (JLink)">
-                <plugin pluginId="com.intellij.java" pluginName="Java" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="javafx">
-              <featurePlugin displayName="JavaFx application">
-                <plugin pluginId="org.jetbrains.plugins.javaFX" pluginName="JavaFX" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="jpackage">
-              <featurePlugin displayName="Platform specific package">
-                <plugin pluginId="org.jetbrains.plugins.javaFX" pluginName="JavaFX" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="javafx-preloader">
-              <featurePlugin displayName="JavaFx preloader">
-                <plugin pluginId="org.jetbrains.plugins.javaFX" pluginName="JavaFX" bundled="true" />
-              </featurePlugin>
-            </entry>
-            <entry key="plain">
-              <featurePlugin displayName="Other">
-                <plugin pluginId="com.intellij.java" pluginName="Java" bundled="true" />
-              </featurePlugin>
-            </entry>
-          </featureMap>
-        </features>
-      </entry>
-    </features>
-  </component>
+  <component name="PluginFeatureService"><![CDATA[{
+  "features": {
+    "com.intellij.configurationType": {
+      "featureMap": {
+        "CompoundRunConfigurationType": {
+          "displayName": "Compound",
+          "pluginData": {
+            "pluginIdString": "com.intellij",
+            "nullablePluginName": "IDEA CORE",
+            "isBundled": true
+          }
+        },
+        "ShConfigurationType": {
+          "displayName": "Shell Script",
+          "pluginData": {
+            "pluginIdString": "com.jetbrains.sh",
+            "nullablePluginName": "Shell Script",
+            "isBundled": true
+          }
+        },
+        "GradleRunConfiguration": {
+          "displayName": "Gradle",
+          "pluginData": {
+            "pluginIdString": "com.intellij.gradle",
+            "nullablePluginName": "Gradle",
+            "isBundled": true
+          }
+        },
+        "Application": {
+          "displayName": "Application",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "JarApplication": {
+          "displayName": "JAR Application",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "Java Scratch": {
+          "displayName": "Java Scratch",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "Remote": {
+          "displayName": "Remote JVM Debug",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "JetRunConfigurationType": {
+          "displayName": "Kotlin",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.kotlin",
+            "nullablePluginName": "Kotlin",
+            "isBundled": true
+          }
+        },
+        "KotlinStandaloneScriptRunConfigurationType": {
+          "displayName": "Kotlin script (Beta)",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.kotlin",
+            "nullablePluginName": "Kotlin",
+            "isBundled": true
+          }
+        },
+        "XSLT": {
+          "displayName": "XSLT",
+          "pluginData": {
+            "pluginIdString": "XPathView",
+            "nullablePluginName": "XPathView + XSLT",
+            "isBundled": true
+          }
+        },
+        "TestNG": {
+          "displayName": "TestNG",
+          "pluginData": {
+            "pluginIdString": "TestNG-J",
+            "nullablePluginName": "TestNG",
+            "isBundled": true
+          }
+        },
+        "JUnit": {
+          "displayName": "JUnit",
+          "pluginData": {
+            "pluginIdString": "JUnit",
+            "nullablePluginName": "JUnit",
+            "isBundled": true
+          }
+        },
+        "GroovyScriptRunConfiguration": {
+          "displayName": "Groovy",
+          "pluginData": {
+            "pluginIdString": "org.intellij.groovy",
+            "nullablePluginName": "Groovy",
+            "isBundled": true
+          }
+        },
+        "#org.jetbrains.idea.devkit.run.PluginConfigurationType": {
+          "displayName": "Plugin",
+          "pluginData": {
+            "pluginIdString": "DevKit",
+            "nullablePluginName": "Plugin DevKit",
+            "isBundled": true
+          }
+        },
+        "AntRunConfiguration": {
+          "displayName": "Ant Target",
+          "pluginData": {
+            "pluginIdString": "AntSupport",
+            "nullablePluginName": "Ant",
+            "isBundled": true
+          }
+        },
+        "MavenRunConfiguration": {
+          "displayName": "Maven",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.idea.maven",
+            "nullablePluginName": "Maven",
+            "isBundled": true
+          }
+        },
+        "AndroidRunConfigurationType": {
+          "displayName": "Android App",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "AndroidTestRunConfigurationType": {
+          "displayName": "Android Instrumented Tests",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "ComposePreviewRunConfiguration": {
+          "displayName": "Compose Preview",
+          "pluginData": {
+            "pluginIdString": "com.android.tools.design",
+            "nullablePluginName": "Design Tools",
+            "isBundled": true
+          }
+        }
+      }
+    },
+    "dependencySupport": {
+      "featureMap": {
+        "java:org.openjfx:javafx-base": {
+          "displayName": "JavaFX",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.plugins.javaFX",
+            "nullablePluginName": "JavaFX",
+            "isBundled": true
+          }
+        },
+        "java:org.testng:testng": {
+          "displayName": "TestNG",
+          "pluginData": {
+            "pluginIdString": "TestNG-J",
+            "nullablePluginName": "TestNG",
+            "isBundled": true
+          }
+        },
+        "java:org.projectlombok:lombok": {
+          "displayName": "Lombok",
+          "pluginData": {
+            "pluginIdString": "Lombook Plugin",
+            "nullablePluginName": "Lombok",
+            "isBundled": true
+          }
+        },
+        "java:junit:junit": {
+          "displayName": "JUnit",
+          "pluginData": {
+            "pluginIdString": "JUnit",
+            "nullablePluginName": "JUnit",
+            "isBundled": true
+          }
+        }
+      }
+    },
+    "com.intellij.facetType": {
+      "featureMap": {
+        "kotlin-language": {
+          "displayName": "Kotlin",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.kotlin",
+            "nullablePluginName": "Kotlin",
+            "isBundled": true
+          }
+        },
+        "android": {
+          "displayName": "Android",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "android-artifact": {
+          "displayName": "Android Artifact",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "android-gradle": {
+          "displayName": "Android-Gradle",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "native-android-gradle": {
+          "displayName": "Native-Android-Gradle",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "java-gradle": {
+          "displayName": "Java-Gradle",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "apk": {
+          "displayName": "APK",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        }
+      }
+    },
+    "com.intellij.packaging.artifacts.ArtifactType": {
+      "featureMap": {
+        "jar": {
+          "displayName": "JAR",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "jlink": {
+          "displayName": "Run-time image (JLink)",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "javafx": {
+          "displayName": "JavaFx application",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.plugins.javaFX",
+            "nullablePluginName": "JavaFX",
+            "isBundled": true
+          }
+        },
+        "jpackage": {
+          "displayName": "Platform specific package",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.plugins.javaFX",
+            "nullablePluginName": "JavaFX",
+            "isBundled": true
+          }
+        },
+        "javafx-preloader": {
+          "displayName": "JavaFx preloader",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.plugins.javaFX",
+            "nullablePluginName": "JavaFX",
+            "isBundled": true
+          }
+        },
+        "plain": {
+          "displayName": "Other",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        }
+      }
+    }
+  }
+}]]></component>
   <component name="TextMateSettings">
     <bundles>
       <BundleConfigBean>
@@ -17794,6 +18439,51 @@
         <option name="name" value="sql" />
         <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/sql" />
       </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="dart" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/dart" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="latex" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/latex" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="erlang" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/erlang" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="diff" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/diff" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="git-base" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/git-base" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="markdown-math" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/markdown-math" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="restructuredtext" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/restructuredtext" />
+      </BundleConfigBean>
     </bundles>
+  </component>
+  <component name="shared-index-jdk-hash">
+    <option name="entries">
+      <entry>
+        <option name="aliases">
+          <list>
+            <option value="openjdk-20.0.1" />
+            <option value="openjdk-20" />
+            <option value="20.0.1" />
+            <option value="20" />
+          </list>
+        </option>
+        <option name="hash" value="a1a55c692b55a534dca11b2804b498258fd15e70" />
+        <option name="name" value="20" />
+        <option name="snapshotHash" value="aa1f37b6adabe9ff8c9909271020d148cace9a0bb19d848f1ae222cf5a63f749" />
+      </entry>
+    </option>
   </component>
 </application>
