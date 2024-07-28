@@ -1,21 +1,79 @@
 package cn.nicepkg.gptrunner.intellij.services.impl
 
 import cn.nicepkg.gptrunner.intellij.services.LangChainService
+import com.intellij.openapi.application.ApplicationManager
+import com.intellij.openapi.diagnostic.Logger
+import com.intellij.openapi.fileEditor.FileEditorManager
+import com.intellij.openapi.project.Project
 import dev.langchain4j.model.openai.OpenAiChatModel
 import dev.langchain4j.model.input.PromptTemplate
 import dev.langchain4j.model.chat.ChatLanguageModel
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
+import kotlinx.coroutines.*
+import java.util.concurrent.atomic.AtomicReference
+import kotlin.coroutines.CoroutineContext
 
-class LangChainServiceImpl : LangChainService {
+class LangChainServiceImpl(private val project: Project) : LangChainService {
+    private val logger = Logger.getInstance(LangChainServiceImpl::class.java)
+
     private val model: ChatLanguageModel = OpenAiChatModel.builder()
         .apiKey(System.getenv("OPENAI_API_KEY") ?: "demo")
-        .baseUrl(System.getenv("OPENAI_API_BASE") ?: "https")
+        .baseUrl(System.getenv("OPENAI_API_BASE") ?: "https://api.zyai.online/v1")
         .modelName(System.getenv("OPENAI_MODEL_NAME") ?: "claude-3-5-sonnet-20240620")
         .temperature(0.9)
         .build()
 
-    override suspend fun getCodeSuggestion(context: String): String = withContext(Dispatchers.IO) {
+    private val cursorStopDelay = 30L
+    private val lastCursorPosition = AtomicReference<Pair<Int, Int>>()
+    private var lastRequestJob: Job? = null
+
+    private val coroutineScope = CoroutineScope(Dispatchers.Default + SupervisorJob())
+    private val throttleInterval = 100L
+    private var lastRequestTime = 0L
+
+    private var isGenerating = false
+
+    private val uiDispatcher = object : CoroutineDispatcher() {
+        override fun dispatch(context: CoroutineContext, block: Runnable) {
+            ApplicationManager.getApplication().invokeLater(block)
+        }
+    }
+
+    fun onCursorMoved(line: Int, column: Int, getCurrentContext: () -> String) {
+        lastCursorPosition.set(Pair(line, column))
+        lastRequestJob?.cancel()
+        if (isGenerating) return
+        lastRequestJob = coroutineScope.launch {
+            delay(cursorStopDelay)
+            val currentPosition = lastCursorPosition.get()
+            if (currentPosition.first == line && currentPosition.second == column) {
+                val currentTime = System.currentTimeMillis()
+                if (currentTime - lastRequestTime >= throttleInterval) {
+                    lastRequestTime = currentTime
+                    val context = withContext(Dispatchers.Default) { getCurrentContext() }
+                    val (prefix, suffix) = extractPrefixAndSuffix(context)
+                    if (scoreContext(prefix, suffix) >= 0.5) {
+                        getCodeSuggestion(context)
+                    }
+                }
+            }
+        }
+    }
+
+    override suspend fun getCodeSuggestion(context: String): String = withContext(Dispatchers.Default) {
+        try {
+            if (context.isEmpty()) {
+                logger.warn("Empty context provided")
+                return@withContext ""
+            }
+            val (prefix, suffix) = extractPrefixAndSuffix(context)
+            generateSuggestion(prefix, suffix)
+        } catch (e: Exception) {
+            logger.error("Error generating code suggestion: ${e.javaClass.simpleName} - ${e.message}", e)
+            "Error: ${e.javaClass.simpleName} - ${e.message}"
+        }
+    }
+
+    private suspend fun generateSuggestion(prefix: String, suffix: String): String = withContext(Dispatchers.Default) {
         val promptTemplate = PromptTemplate.from(
             """
             As GitHub Copilot, analyze the following code context and provide a concise suggestion to extend or improve it. 
@@ -47,7 +105,7 @@ class LangChainServiceImpl : LangChainService {
             """
         )
 
-        val prompt = promptTemplate.apply(mapOf("context" to context))
+        val prompt = promptTemplate.apply(mapOf("context" to "$prefix|$suffix"))
         val response = model.generate(prompt.text())
 
         cleanAndFormatResponse(response)
@@ -55,9 +113,7 @@ class LangChainServiceImpl : LangChainService {
 
     private fun cleanAndFormatResponse(response: String): String {
         return response
-            .replace("```java", "").replace("```", "") // 移除可能的Markdown代码块标记
-            .replace("```rust", "").replace("```", "") // 移除可能的Markdown代码块标记
-            .replace("```go", "").replace("```", "") // 移除可能的Markdown代码块标记
+            .replace("```go", "").replace("```", "")
             .lines()
             .filter { it.trim().isNotEmpty() }
             .joinToString("\n")
@@ -73,25 +129,21 @@ class LangChainServiceImpl : LangChainService {
         lines.forEach { line ->
             val trimmedLine = line.trim()
 
-            // 处理多行注释的开始和结束
             if (trimmedLine.startsWith("/*")) inComment = true
             if (trimmedLine.endsWith("*/")) inComment = false
 
-            // 调整缩进级别
             if (trimmedLine.startsWith("}") || trimmedLine.startsWith(")")) {
                 indentLevel = (indentLevel - 1).coerceAtLeast(0)
             }
 
             val indent = "    ".repeat(indentLevel)
 
-            // 对于非空行应用缩进
             if (trimmedLine.isNotEmpty()) {
                 formattedLines.append(indent).append(trimmedLine).append("\n")
             } else {
-                formattedLines.append("\n") // 保留空行，但不缩进
+                formattedLines.append("\n")
             }
 
-            // 增加缩进级别
             if (!inComment && (trimmedLine.endsWith("{") || trimmedLine.endsWith("("))) {
                 indentLevel++
             }
@@ -100,10 +152,10 @@ class LangChainServiceImpl : LangChainService {
         return formattedLines.toString().trimEnd()
     }
 
-    override suspend fun convertCode(code: String, targetLanguage: String): String = withContext(Dispatchers.IO) {
+    override suspend fun convertCode(code: String, targetLanguage: String): String = withContext(Dispatchers.Default) {
         val promptTemplate = PromptTemplate.from(
             """
-            Convert the following code to {{targetLanguage}}. 
+            Convert the following code to {{targetLanguage}}.
             Only provide the converted code without any explanations or comments.
             The code should be ready to be directly used in a {{targetLanguage}} file.
 
@@ -121,5 +173,15 @@ class LangChainServiceImpl : LangChainService {
         val response = model.generate(prompt.text())
 
         cleanAndFormatResponse(response)
+    }
+
+    private fun extractPrefixAndSuffix(context: String): Pair<String, String> {
+        val parts = context.split("|", limit = 2)
+        return Pair(parts.getOrElse(0) { "" }, parts.getOrElse(1) { "" })
+    }
+
+    private fun scoreContext(prefix: String, suffix: String): Double {
+        // Implement context scoring logic if needed
+        return 1.0 // Example return value
     }
 }
