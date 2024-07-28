@@ -12,7 +12,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class GenerateCodeSuggestionAction : AnAction("Generate Code Suggestion") {
+class GenerateCodeSuggestionAction : AnAction("GPT:代码提示") {
     override fun actionPerformed(e: AnActionEvent) {
         val editor = e.getData(CommonDataKeys.EDITOR) ?: return
         val project = e.project ?: return

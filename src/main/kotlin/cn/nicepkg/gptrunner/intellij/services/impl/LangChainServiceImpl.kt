@@ -11,24 +11,39 @@ class LangChainServiceImpl : LangChainService {
     private val model: ChatLanguageModel = OpenAiChatModel.builder()
         .apiKey(System.getenv("OPENAI_API_KEY") ?: "demo")
         .baseUrl(System.getenv("OPENAI_API_BASE") ?: "https")
-        .modelName(System.getenv("OPENAI_MODEL_NAME") ?: "gpt-3.5-turbo")
+        .modelName(System.getenv("OPENAI_MODEL_NAME") ?: "claude-3-5-sonnet-20240620")
         .temperature(0.7)
         .build()
 
     override suspend fun getCodeSuggestion(context: String): String = withContext(Dispatchers.IO) {
         val promptTemplate = PromptTemplate.from(
             """
-            You are an AI programming assistant. Given the following Java code context, provide a concise code suggestion to extend or improve the existing code. 
-            Only provide the actual Java code without any explanations, comments, or markdown formatting.
-            Do not include backticks or language specifiers.
-            The code should be ready to be directly inserted into a Java file.
-
-            Context:
+            As GitHub Copilot, analyze the following code context and provide a concise suggestion to extend or improve it:
+        
             {{context}}
-
-            Provide a concise code suggestion to insert at the current cursor position:
+        
+            Requirements:
+            1. Provide only code without explanations or markdown
+            2. Do not include backticks or language specifiers
+            3. The code should be ready to insert directly into the file
+            4. Keep the suggestion concise and directly related to the current context
+            5. Focus on improving or extending the existing code, not adding unrelated functions
+            6. Do not generate content that may violate copyrights
+            7. Add concise Chinese comments to important code lines
+        
+            Steps:
+            1. Analyze the given code context
+            2. Identify areas for immediate improvement or extension within the existing scope
+            3. Design a concise code snippet that directly enhances the current functionality
+            4. Add brief Chinese comments to explain key parts of the suggested code
+            5. Output only the code suggestion with Chinese comments
+        
+            Code suggestion:
             """
         )
+
+
+
 
         val prompt = promptTemplate.apply(mapOf("context" to context))
         val response = model.generate(prompt.text())
@@ -87,6 +102,27 @@ class LangChainServiceImpl : LangChainService {
         return formattedLines.toString().trimEnd()
     }
 
+    override suspend fun convertCode(code: String, targetLanguage: String): String = withContext(Dispatchers.IO) {
+        val promptTemplate = PromptTemplate.from(
+            """
+            Convert the following code to {{targetLanguage}}. 
+            Only provide the converted code without any explanations or comments.
+            The code should be ready to be directly used in a {{targetLanguage}} file.
 
+            Original code:
+            {{code}}
+
+            Converted {{targetLanguage}} code:
+            """
+        )
+
+        val prompt = promptTemplate.apply(mapOf(
+            "code" to code,
+            "targetLanguage" to targetLanguage
+        ))
+        val response = model.generate(prompt.text())
+
+        cleanAndFormatResponse(response)
+    }
 
 }

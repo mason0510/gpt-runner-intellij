@@ -28,5 +28,11 @@ providing real-time coding assistance, automated documentation, and intelligent 
     <action id="cn.nicepkg.gptrunner.intellij.actions.GenerateCodeSuggestion" class="cn.nicepkg.gptrunner.intellij.actions.GenerateCodeSuggestionAction" text="Generate Code Suggestion" description="Generate code suggestion at cursor position">
       <add-to-group group-id="EditorPopupMenu" anchor="first" />
     </action>
+    <!-- 新增的代码转换 action group -->
+    <group id="GPTRunner.ConvertCode" class="cn.nicepkg.gptrunner.intellij.actions.ConvertCodeAction" text="GPT:代码转换" description="Convert code to another programming language" popup="true">
+      <add-to-group group-id="ToolsMenu" anchor="last" />
+      <action id="GPTRunner.ConvertToGo" class="cn.nicepkg.gptrunner.intellij.actions.ConvertToGoAction" text="转换为 Go" description="Convert code to Go" />
+      <action id="GPTRunner.ConvertToRust" class="cn.nicepkg.gptrunner.intellij.actions.ConvertToRustAction" text="转换为 Rust" description="Convert code to Rust" />
+    </group>
   </actions>
 </idea-plugin>
