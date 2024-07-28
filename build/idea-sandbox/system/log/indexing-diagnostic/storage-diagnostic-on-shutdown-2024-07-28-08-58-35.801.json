@@ -1,0 +1,108 @@
+{
+  "pageCacheStats" : {
+    "cachedChannelsStatistics" : {
+      "hit" : 607,
+      "miss" : 0,
+      "load" : 107,
+      "capacity" : 400
+    },
+    "uncachedFileAccess" : 250,
+    "maxRegisteredFiles" : 702,
+    "maxCacheSizeInBytes" : 342007808,
+    "pageHit" : 4491,
+    "pageFastCacheHit" : 1114972,
+    "pageMiss" : 0,
+    "pageLoad" : 849,
+    "disposedBuffers" : 304,
+    "capacityInBytes" : 524288000
+  },
+  "vfsStorageStats" : {
+    "statsPerEnumerator" : {
+      "contentHashes.dat" : {
+        "collisions" : 0,
+        "values" : 21,
+        "dataFileSizeInBytes" : 420,
+        "storageSizeInBytes" : 96,
+        "btreeStatistics" : {
+          "pages" : 1,
+          "elements" : 21,
+          "height" : 1,
+          "moves" : 0,
+          "leafPages" : 1,
+          "maxSearchStepsInRequest" : 0,
+          "searchRequests" : 46,
+          "searchSteps" : 0,
+          "pageCapacity" : 32768,
+          "sizeInBytes" : 32768
+        }
+      },
+      "names.dat" : {
+        "collisions" : 4,
+        "values" : 77709,
+        "dataFileSizeInBytes" : 2310484,
+        "storageSizeInBytes" : 160,
+        "btreeStatistics" : {
+          "pages" : 33,
+          "elements" : 77706,
+          "height" : 2,
+          "moves" : 257,
+          "leafPages" : 32,
+          "maxSearchStepsInRequest" : 81,
+          "searchRequests" : 286517,
+          "searchSteps" : 411224,
+          "pageCapacity" : 32768,
+          "sizeInBytes" : 1081344
+        }
+      }
+    }
+  },
+  "indexStorageStats" : {
+    "indexStoragesStats" : { }
+  },
+  "otherStorageStats" : {
+    "statsPerPhm" : {
+      "$USER_HOME$/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/system/frameworks/detection/untitled.92b55dfb/files" : {
+        "persistentEnumeratorStatistics" : {
+          "collisions" : 0,
+          "values" : 0,
+          "dataFileSizeInBytes" : 0,
+          "storageSizeInBytes" : 96,
+          "btreeStatistics" : {
+            "pages" : 0,
+            "elements" : 0,
+            "height" : 0,
+            "moves" : 0,
+            "leafPages" : 1,
+            "maxSearchStepsInRequest" : 0,
+            "searchRequests" : 0,
+            "searchSteps" : 0,
+            "pageCapacity" : 32768,
+            "sizeInBytes" : 0
+          }
+        },
+        "valueStorageSizeInBytes" : 0
+      },
+      "$USER_HOME$/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/system/testHistory/92b55dfb/testStateMap" : {
+        "persistentEnumeratorStatistics" : {
+          "collisions" : 0,
+          "values" : 0,
+          "dataFileSizeInBytes" : 0,
+          "storageSizeInBytes" : 96,
+          "btreeStatistics" : {
+            "pages" : 0,
+            "elements" : 0,
+            "height" : 0,
+            "moves" : 0,
+            "leafPages" : 1,
+            "maxSearchStepsInRequest" : 0,
+            "searchRequests" : 0,
+            "searchSteps" : 0,
+            "pageCapacity" : 32768,
+            "sizeInBytes" : 0
+          }
+        },
+        "valueStorageSizeInBytes" : 0
+      }
+    }
+  }
+}

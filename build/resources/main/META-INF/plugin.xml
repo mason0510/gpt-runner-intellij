@@ -1,8 +1,12 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
   <version>0.0.3</version>
-  <change-notes />
-  <description>&lt;p&gt;&lt;strong&gt;GPT-Runner Intellij&lt;/strong&gt; is a&lt;/p&gt;</description>
+  <description>GPT-Runner: AI-powered coding assistant for your IDE.
+Enhance productivity with intelligent suggestions and seamless integration.
+Features include code generation, documentation assistance, and more.
+Streamline your workflow and boost your coding efficiency with GPT-Runner.
+This plugin integrates advanced language models directly into your development environment,
+providing real-time coding assistance, automated documentation, and intelligent code analysis.</description>
   <idea-version since-build="222" until-build="232.*" />
   <id>cn.nicepkg.gptrunner.intellij</id>
   <name>GPT-Runner</name>
@@ -13,6 +17,7 @@
     <toolWindow factoryClass="cn.nicepkg.gptrunner.intellij.ui.windows.GPTRunnerWindowFactory" id="GPT-Runner" />
     <applicationService serviceInterface="cn.nicepkg.gptrunner.intellij.services.IGPTRunnerExecutableService" serviceImplementation="cn.nicepkg.gptrunner.intellij.services.impl.GPTRunnerExecutableService" />
     <projectService serviceInterface="cn.nicepkg.gptrunner.intellij.services.IGPTRunnerService" serviceImplementation="cn.nicepkg.gptrunner.intellij.services.impl.GPTRunnerService" />
+    <projectService serviceInterface="cn.nicepkg.gptrunner.intellij.services.LangChainService" serviceImplementation="cn.nicepkg.gptrunner.intellij.services.impl.LangChainServiceImpl" />
   </extensions>
   <applicationListeners>
     <listener class="cn.nicepkg.gptrunner.intellij.listeners.ProjectStateListener" topic="com.intellij.openapi.project.ProjectManagerListener" />
@@ -20,5 +25,8 @@
   </applicationListeners>
   <actions>
     <action id="cn.nicepkg.gptrunner.intellij.actions.OpenInEditorMode" class="cn.nicepkg.gptrunner.intellij.actions.OpenInEditorMode" />
+    <action id="cn.nicepkg.gptrunner.intellij.actions.GenerateCodeSuggestion" class="cn.nicepkg.gptrunner.intellij.actions.GenerateCodeSuggestionAction" text="Generate Code Suggestion" description="Generate code suggestion at cursor position">
+      <add-to-group group-id="EditorPopupMenu" anchor="first" />
+    </action>
   </actions>
 </idea-plugin>

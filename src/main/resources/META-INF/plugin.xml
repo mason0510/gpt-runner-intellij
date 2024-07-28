@@ -20,6 +20,9 @@
     <projectService
       serviceInterface="cn.nicepkg.gptrunner.intellij.services.IGPTRunnerService"
       serviceImplementation="cn.nicepkg.gptrunner.intellij.services.impl.GPTRunnerService"/>
+
+    <projectService serviceInterface="cn.nicepkg.gptrunner.intellij.services.LangChainService"
+                    serviceImplementation="cn.nicepkg.gptrunner.intellij.services.impl.LangChainServiceImpl"/>
   </extensions>
 
   <applicationListeners>
@@ -34,6 +37,12 @@
 
   <actions>
     <action id="cn.nicepkg.gptrunner.intellij.actions.OpenInEditorMode" class="cn.nicepkg.gptrunner.intellij.actions.OpenInEditorMode">
+    </action>
+    <action id="cn.nicepkg.gptrunner.intellij.actions.GenerateCodeSuggestion"
+            class="cn.nicepkg.gptrunner.intellij.actions.GenerateCodeSuggestionAction"
+            text="Generate Code Suggestion"
+            description="Generate code suggestion at cursor position">
+      <add-to-group group-id="EditorPopupMenu" anchor="first"/>
     </action>
   </actions>
 </idea-plugin>
