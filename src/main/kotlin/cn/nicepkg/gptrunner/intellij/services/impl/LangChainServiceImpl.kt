@@ -12,7 +12,7 @@ class LangChainServiceImpl : LangChainService {
         .apiKey(System.getenv("OPENAI_API_KEY") ?: "demo")
         .baseUrl(System.getenv("OPENAI_API_BASE") ?: "https")
         .modelName(System.getenv("OPENAI_MODEL_NAME") ?: "claude-3-5-sonnet-20240620")
-        .temperature(0.7)
+        .temperature(0.9)
         .build()
 
     override suspend fun getCodeSuggestion(context: String): String = withContext(Dispatchers.IO) {
@@ -56,6 +56,8 @@ class LangChainServiceImpl : LangChainService {
     private fun cleanAndFormatResponse(response: String): String {
         return response
             .replace("```java", "").replace("```", "") // 移除可能的Markdown代码块标记
+            .replace("```rust", "").replace("```", "") // 移除可能的Markdown代码块标记
+            .replace("```go", "").replace("```", "") // 移除可能的Markdown代码块标记
             .lines()
             .filter { it.trim().isNotEmpty() }
             .joinToString("\n")
