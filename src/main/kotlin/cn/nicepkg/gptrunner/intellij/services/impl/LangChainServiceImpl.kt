@@ -55,29 +55,38 @@ class LangChainServiceImpl : LangChainService {
         val lines = code.lines()
         val formattedLines = StringBuilder()
         var indentLevel = 0
-        var lastNonCommentIndent = ""
+        var inComment = false
 
         lines.forEach { line ->
             val trimmedLine = line.trim()
-            val isComment = trimmedLine.startsWith("//") || trimmedLine.startsWith("/*") || trimmedLine.startsWith("*")
 
+            // 处理多行注释的开始和结束
+            if (trimmedLine.startsWith("/*")) inComment = true
+            if (trimmedLine.endsWith("*/")) inComment = false
+
+            // 调整缩进级别
             if (trimmedLine.startsWith("}") || trimmedLine.startsWith(")")) {
                 indentLevel = (indentLevel - 1).coerceAtLeast(0)
             }
 
-            val indent = if (isComment) lastNonCommentIndent else "    ".repeat(indentLevel)
-            formattedLines.append(indent).append(trimmedLine).append("\n")
+            val indent = "    ".repeat(indentLevel)
 
-            if (!isComment) {
-                lastNonCommentIndent = indent
-                if (trimmedLine.endsWith("{") || trimmedLine.endsWith("(")) {
-                    indentLevel++
-                }
+            // 对于非空行应用缩进
+            if (trimmedLine.isNotEmpty()) {
+                formattedLines.append(indent).append(trimmedLine).append("\n")
+            } else {
+                formattedLines.append("\n") // 保留空行，但不缩进
+            }
+
+            // 增加缩进级别
+            if (!inComment && (trimmedLine.endsWith("{") || trimmedLine.endsWith("("))) {
+                indentLevel++
             }
         }
 
         return formattedLines.toString().trimEnd()
     }
+
 
 
 }

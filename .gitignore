@@ -1,0 +1,7 @@
+.gpt-runner
+.github
+.run
+.idea
+build
+lib
+gradle

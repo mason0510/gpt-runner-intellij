@@ -6751,3 +6751,197 @@ java.net.SocketTimeoutException: Connect timed out
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 2024-07-28 10:25:35,726 [  70166]   WARN - #c.a.t.i.u.SdkComponentSource - Still waiting for package manifests to be fetched remotely.
+2024-07-28 10:31:30,909 [      4]   INFO - #c.i.i.StartupUtil - ------------------------------------------------------ IDE STARTED ------------------------------------------------------
+2024-07-28 10:31:30,973 [     68]   INFO - #c.i.i.p.PluginManager - Using cached broken plugins file
+2024-07-28 10:31:30,975 [     70]   INFO - #c.i.u.EnvironmentUtil - loading shell env is skipped: IDE has been launched from a terminal (SHLVL=1)
+2024-07-28 10:31:31,012 [    107]   INFO - #c.i.i.StartupUtil - JNA library (64-bit) loaded in 42 ms
+2024-07-28 10:31:31,031 [    126]   INFO - #c.i.i.StartupUtil - IDE: IntelliJ IDEA (build #IC-222.4554.10, 15 Mar 2023 14:12)
+2024-07-28 10:31:31,032 [    127]   INFO - #c.i.i.StartupUtil - OS: Mac OS X (13.2.1, x86_64)
+2024-07-28 10:31:31,033 [    128]   INFO - #c.i.i.StartupUtil - JRE: 17.0.6+7-b469.82 (JetBrains s.r.o.)
+2024-07-28 10:31:31,034 [    129]   INFO - #c.i.i.StartupUtil - JVM: 17.0.6+7-b469.82 (OpenJDK 64-Bit Server VM)
+2024-07-28 10:31:31,043 [    138]   INFO - #c.i.i.StartupUtil - PID: 96764
+2024-07-28 10:31:31,044 [    139]   INFO - #c.i.i.StartupUtil - JVM options: [-Dapple.awt.fileDialogForDirectories=true, -Dapple.laf.useScreenMenuBar=true, -Didea.auto.reload.plugins=true, -Didea.classpath.index.enabled=false, -Didea.config.path=/Users/houzi/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/config, -Didea.is.internal=true, -Didea.log.path=/Users/houzi/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/system/log, -Didea.platform.prefix=Idea, -Didea.plugin.in.sandbox.mode=true, -Didea.plugins.path=/Users/houzi/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/plugins, -Didea.required.plugins.id=cn.nicepkg.gptrunner.intellij, -Didea.smooth.progress=false, -Didea.system.path=/Users/houzi/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/system, -Didea.vendor.name=JetBrains, -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader, -Djbr.catch.SIGABRT=true, -Djdk.attach.allowAttachSelf=true, -Djdk.http.auth.tunneling.disabledSchemes="", -Djdk.module.illegalAccess.silent=true, -Dkotlinx.coroutines.debug=off, -Dsun.io.useCanonCaches=false, -Dsun.java2d.metal=true, -XX:ReservedCodeCacheSize=512m, -XX:+UseG1GC, -XX:SoftRefLRUPolicyMSPerMB=50, -XX:CICompilerCount=2, -XX:+HeapDumpOnOutOfMemoryError, -XX:-OmitStackTraceInFastThrow, -XX:+IgnoreUnrecognizedVMOptions, -XX:CompileCommand=exclude,com/intellij/openapi/vfs/impl/FilePartNodeRoot,trieDescend, -XX:ErrorFile=$USER_HOME/java_error_in_idea_%p.log, -XX:HeapDumpPath=$USER_HOME/java_error_in_idea.hprof, --add-opens=java.base/java.io=ALL-UNNAMED, --add-opens=java.base/java.lang=ALL-UNNAMED, --add-opens=java.base/java.lang.ref=ALL-UNNAMED, --add-opens=java.base/java.lang.reflect=ALL-UNNAMED, --add-opens=java.base/java.net=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.base/java.nio.charset=ALL-UNNAMED, --add-opens=java.base/java.text=ALL-UNNAMED, --add-opens=java.base/java.time=ALL-UNNAMED, --add-opens=java.base/java.util=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent=ALL-UNNAMED, --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED, --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED, --add-opens=java.base/sun.nio.ch=ALL-UNNAMED, --add-opens=java.base/sun.nio.fs=ALL-UNNAMED, --add-opens=java.base/sun.security.ssl=ALL-UNNAMED, --add-opens=java.base/sun.security.util=ALL-UNNAMED, --add-opens=java.desktop/java.awt=ALL-UNNAMED, --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-opens=java.desktop/java.awt.image=ALL-UNNAMED, --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED, --add-opens=java.desktop/java.awt.font=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED, --add-opens=java.desktop/sun.awt=ALL-UNNAMED, --add-opens=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.java2d=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/com.sun.java.swing=ALL-UNNAMED, --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED, --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED, --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED, --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED, --add-opens=java.desktop/com.apple.laf=ALL-UNNAMED, --add-opens=java.desktop/com.apple.eawt.event=ALL-UNNAMED, --add-opens=java.desktop/com.apple.eawt=ALL-UNNAMED, --add-opens=java.desktop/sun.lwawt.macosx=ALL-UNNAMED, --add-opens=java.desktop/sun.lwawt=ALL-UNNAMED, -Xms128m, -Xmx750m, -Dfile.encoding=UTF-8, -Duser.country=CN, -Duser.language=zh, -Duser.variant, -ea]
+2024-07-28 10:31:31,045 [    140]   INFO - #c.i.i.StartupUtil - args: []
+2024-07-28 10:31:31,045 [    140]   INFO - #c.i.i.StartupUtil - library path: /Users/houzi/.gvm/pkgsets/go1.20/global/overlay/lib::/Users/houzi/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+2024-07-28 10:31:31,046 [    141]   INFO - #c.i.i.StartupUtil - boot library path: /Users/houzi/.gradle/caches/modules-2/files-2.1/com.jetbrains/jbre/jbr_jcef-17.0.6-osx-x64-b469.82/extracted/jbr_jcef-17.0.6-x64-b469/Contents/Home/lib
+2024-07-28 10:31:31,067 [    162]   INFO - #c.i.i.StartupUtil - locale=zh_CN_#Hans JNU=UTF-8 file.encoding=UTF-8
+  idea.config.path=/Users/houzi/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/config
+  idea.system.path=/Users/houzi/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/system
+  idea.plugins.path=/Users/houzi/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/plugins
+  idea.log.path=/Users/houzi/home/ai-labs/gpt-runner-intellij/build/idea-sandbox/system/log
+2024-07-28 10:31:31,076 [    171]   INFO - #c.i.i.StartupUtil - CPU cores: 12; ForkJoinPool.commonPool: java.util.concurrent.ForkJoinPool@18065bfa[Running, parallelism = 11, size = 5, active = 4, running = 4, steals = 3, tasks = 0, submissions = 0]; factory: com.intellij.concurrency.IdeaForkJoinWorkerThreadFactory@7a00d9a8
+2024-07-28 10:31:31,289 [    384]   INFO - #c.i.i.p.PluginManager - Plugin PluginDescriptor(name=Groovy, id=org.intellij.groovy, descriptorPath=plugin.xml, path=~/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2022.2.5/836d1896d66b8d410f65d76e8cbc910b16d9edab/ideaIC-2022.2.5/plugins/Groovy, version=222.4554.10, package=org.jetbrains.plugins.groovy, isBundled=true) misses optional descriptor duplicates-groovy.xml
+2024-07-28 10:31:31,290 [    385]   INFO - #c.i.i.p.PluginManager - Plugin PluginDescriptor(name=Groovy, id=org.intellij.groovy, descriptorPath=plugin.xml, path=~/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2022.2.5/836d1896d66b8d410f65d76e8cbc910b16d9edab/ideaIC-2022.2.5/plugins/Groovy, version=222.4554.10, package=org.jetbrains.plugins.groovy, isBundled=true) misses optional descriptor duplicates-detection-groovy.xml
+2024-07-28 10:31:31,416 [    511]   INFO - #c.i.i.p.PluginManager - Module intellij.space.gateway is not enabled because dependency com.jetbrains.gateway is not available
+Module intellij.space.php is not enabled because dependency com.jetbrains.php is not available
+Module kotlin-ultimate.javascript.nodeJs is not enabled because dependency NodeJS is not available
+Module kotlin-ultimate.javascript.debugger is not enabled because dependency JavaScriptDebugger is not available
+Module intellij.space.index is not enabled because dependency intellij.indexing.shared is not available
+Module kotlin-ultimate.common-for-kotlin is not enabled because dependency com.intellij.nativeDebug is not available
+Module kotlin-ultimate.ultimate-native is not enabled because dependency kotlin-ultimate.common-for-kotlin is not available
+2024-07-28 10:31:31,446 [    541]   INFO - #c.i.i.p.PluginManager - Loaded bundled plugins: Eclipse Keymap (222.4554.10), Emoji Picker (222.4554.10), Plugin DevKit (222.4554.10), Configuration Script (222.4554.10), Kotlin (222-1.7.10-release-334-IJ4554.10), com.intellij.tracing.ide (222.4554.10), Images (222.4554.10), JUnit (222.4554.10), Subversion (222.4554.10), Visual Studio Keymap (222.4554.10), Gradle (222.4554.10), Qodana (222.4554.10), Java Internationalization (222.4554.10), IntelliLang (222.4554.10), Android (2021.2.1 Final.222.4554.10), Settings Sync (222.4554.10), Machine Learning in Search Everywhere (222.4554.10), macOS Light Theme (222.4554.10), Eclipse Interoperability (222.4554.10), Code Coverage for Java (222.4554.10), Projector Libraries for Code With Me and Remote Development (222.4554.10), GitHub (222.4554.10), Java Stream Debugger (222.4554.10), Java IDE Customization (222.4554.10), JetBrains Marketplace Licensing Support (222.4554.10), Toml (222.4554.10), Smali Support (222.4554.10), Java Bytecode Decompiler (222.4554.10), Properties (222.4554.10), JetBrains Repository Search (222.4554.10), Perforce Helix Core (222.4554.10), Markdown (222.4554.10), EditorConfig (222.4554.10), Gradle-Java (222.4554.10), Windows 10 Light Theme (222.4554.10), Java (222.4554.10), NetBeans Keymap (222.4554.10), IDE Features Trainer (222.4554.10), JetBrains maven model api classes (222.4554.10), Shared Indexes (222.4554.10), com.intellij.dev (222.4554.10), Mercurial (222.4554.10), Design Tools (222.4554.10), Machine Learning Code Completion (222.4554.10), Lombok (222.4554.10), WebP Support (222.4554.10), Space (222.4554.10), JavaFX (222.4554.10), YAML (222.4554.10), Task Management (222.4554.10), Groovy (222.4554.10), Bytecode Viewer (222.4554.10), Gradle DSL API (222.4554.10), Ant (222.4554.10), Grazie (222.4554.10), TestNG (222.4554.10), IDE Features Trainer: Git Lessons (222.4554.10), Maven (222.4554.10), Gradle Dependency Updater Implementation (222.4554.10), Shell Script (222.4554.10), IDEA CORE (222.4554.10), XSLT Debugger (222.4554.10), Code With Me (222.4554.10), XPathView + XSLT (222.4554.10), Copyright (222.4554.10), Git (222.4554.10), Gradle-Maven (222.4554.10), Settings Repository (222.4554.10), Package Search (222.4554.10), UI Designer (222.4554.10), WSL File System Support (222.4554.10), Terminal (222.4554.10), TextMate Bundles (222.4554.10)
+2024-07-28 10:31:31,446 [    541]   INFO - #c.i.i.p.PluginManager - Loaded custom plugins: GPT-Runner (0.0.3)
+2024-07-28 10:31:31,649 [    744]   WARN - #c.i.u.m.MacOSApplicationProvider - No URL bundle (CFBundleURLTypes) is defined in the main bundle.
+To be able to open external links, specify protocols in the app layout section of the build file.
+Example: args.urlSchemes = ["your-protocol"] will handle following links: your-protocol://open?file=file&line=line
+2024-07-28 10:31:32,307 [   1402]   INFO - #c.i.a.o.PathMacrosImpl - Loaded path macros: {MAVEN_REPOSITORY=/Users/houzi/home/JAVA_environment/java_environment/repository}
+2024-07-28 10:31:32,318 [   1413]   INFO - #o.j.i.BuiltInServerManager - built-in server started, port 63344
+2024-07-28 10:31:32,413 [   1508]   INFO - #c.i.u.i.FilePageCache - lower=100; upper=500; buffer=10; max=730
+2024-07-28 10:31:32,622 [   1717]   INFO - #c.i.o.e.c.i.AppFontOptions - Font setting migration: JetBrains Mono -> [JetBrains Mono, Regular, Bold]
+2024-07-28 10:31:32,691 [   1786]   INFO - #c.i.o.a.Experiments - Experimental features enabled for user: wsl.p9.support, wsl.prefer.p9.support, wsl.p9.show.roots.in.file.chooser, wsl.execute.with.wsl.exe, linux.native.menu, recent.and.edited.files.together, show.create.new.element.in.popup, search.everywhere.mixed.results, new.project.wizard, editor.reader.mode, new.large.text.file.viewer, wsl.fsd.content.loader, terminal.shell.command.handling
+2024-07-28 10:31:32,738 [   1833]   INFO - #c.i.o.v.n.p.PersistentFSConnector - 205 ms to load free records and inverted name index
+2024-07-28 10:31:32,749 [   1844]   INFO - #c.a.t.i.s.ServerFlagInitializer - Enabled server flags: 
+2024-07-28 10:31:33,010 [   2105]   INFO - #c.i.u.n.s.CertificateManager - Default SSL context initialized
+2024-07-28 10:31:33,044 [   2139]   INFO - #c.i.o.u.i.UpdateCheckerService - channel: release
+2024-07-28 10:31:33,271 [   2366]   INFO - #c.i.u.m.t.NST - nst library works properly, successfully created and released native touchbar object
+2024-07-28 10:31:33,274 [   2369]   INFO - #c.i.u.p.CommonProxy - <html>You have JVM property "https.proxyHost" set to "127.0.0.1".<br>This may lead to incorrect behaviour. Proxy should be set in Settings | HTTP Proxy<br>This JVM property is old and its usage is not recommended by Oracle.<br>(Note: It could have been assigned by some code dynamically.)</html>
+2024-07-28 10:31:33,294 [   2389]   INFO - #c.i.u.m.t.TouchbarSupport - touchbar support is enabled
+2024-07-28 10:31:33,503 [   2598]   INFO - #c.i.u.p.CommonProxy - <html>You have JVM property "https.proxyHost" set to "127.0.0.1".<br>This may lead to incorrect behaviour. Proxy should be set in Settings | HTTP Proxy<br>This JVM property is old and its usage is not recommended by Oracle.<br>(Note: It could have been assigned by some code dynamically.)</html>
+2024-07-28 10:31:33,596 [   2691]   INFO - #c.i.i.s.p.i.SharedIndexMainZipStorage - Shared Indexes Storage is opened and empty
+2024-07-28 10:31:34,041 [   3136]   INFO - #c.i.o.v.i.l.NativeFileWatcherImpl - Starting file watcher: /Users/houzi/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2022.2.5/836d1896d66b8d410f65d76e8cbc910b16d9edab/ideaIC-2022.2.5/bin/mac/fsnotifier
+2024-07-28 10:31:34,048 [   3143]   INFO - #c.i.o.v.i.l.NativeFileWatcherImpl - Native file watcher is operational.
+2024-07-28 10:31:34,623 [   3718]   INFO - #c.i.u.m.s.Menu - use new ScreenMenuBar implementation
+2024-07-28 10:31:34,899 [   3994]   INFO - #c.i.u.i.FileBasedIndexImpl - Indices to be built:FilenameIndex(v = 258)
+2024-07-28 10:31:34,918 [   4013]   INFO - c.i.u.i.FileBasedIndexDataInitialization - Index data initialization done: 2343 ms. Initialized indexes: [FilenameIndex, FrameworkDetectionIndex, TodoIndex, IdIndex, filetypes, Stubs, Trigram.Index, fileIncludes, DomFileIndex, RelaxSymbolIndex, XmlTagNames, XmlNamespaces, html5.custom.attributes.index, SchemaTypeInheritance, json.file.root.values, editorconfig.index.name, xmlProperties, bytecodeAnalysis, java.auto.module.name, java.source.module.name, java.null.method.argument, java.fun.expression, java.binary.plus.expression, JavaFxControllerClassIndex, javafx.id.name, javafx.custom.component, org.jetbrains.kotlin.idea.versions.KotlinJvmMetadataVersionIndex, org.jetbrains.kotlin.idea.versions.KotlinJsMetadataVersionIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinPartialPackageNamesIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinClassFileIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinJavaScriptMetaFileIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFileIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinMetadataFilePackageIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinModuleMappingIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinPackageSourcesMemberNamesIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinJvmModuleAnnotationsIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinBuiltInsMetadataIndex, org.jetbrains.kotlin.idea.vfilefinder.KotlinStdlibIndex, org.jetbrains.kotlin.idea.vfilefinder.KlibMetaFileIndex, com.intellij.uiDesigner.FormClassIndex, XsltSymbolIndex, LombokConfigIndex, yaml.keys.name, IdeaPluginRegistrationIndex, PluginIdModuleIndex, PluginIdDependenciesIndex, devkit.ExtensionPointIndex, devkit.ExtensionPointClassIndex, ant-imports, com.android.tools.idea.model.AndroidManifestIndex$Companion$NAME$1.NAME, BindingXmlIndex, NavXmlIndex].
+2024-07-28 10:31:35,291 [   4386]   INFO - c.i.p.s.StubIndexImpl$StubIndexInitialization - Index data initialization done: 372 ms. Initialized stub indexes: {org.jetbrains.kotlin.idea.stubindex.KotlinProbablyContractedFunctionShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelTypeAliasFqNameIndex, jvm.static.member.name, properties.index, org.jetbrains.kotlin.idea.stubindex.KotlinExactPackagesIndex, org.jetbrains.kotlin.idea.stubindex.KotlinInnerTypeAliasClassIdIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinTypeAliasShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinExtensionsInObjectsByReceiverTypeIndex, java.class.shortname, gr.class.fqn, org.jetbrains.kotlin.idea.stubindex.KotlinTypeAliasByExpansionShortNameIndex, java.class.extlist, kotlin.primeIndexKey, gr.script.class, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelClassByPackageIndex, org.jetbrains.kotlin.idea.stubindex.KotlinSubclassObjectNameIndex, gr.annot.method.name, jvm.static.member.type, gr.field.name, org.jetbrains.kotlin.idea.stubindex.KotlinJvmNameAnnotationIndex, java.module.name, org.jetbrains.kotlin.idea.stubindex.KotlinAnnotationsIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeFqNameIndex, gr.anonymous.class, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelPropertyFqnNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinMultifileClassPartIndex, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelTypeAliasByPackageIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFileFacadeClassByPackageIndex, org.jetbrains.kotlin.idea.stubindex.KotlinSuperClassIndex, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelFunctionFqnNameIndex, java.annotations, org.jetbrains.kotlin.idea.stubindex.KotlinScriptFqnIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFunctionShortNameIndex, java.method.name, org.jetbrains.kotlin.idea.stubindex.KotlinProbablyNothingPropertyShortNameIndex, markdown.header, java.anonymous.baseref, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelPropertyByPackageIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFullClassNameIndex, dom.namespaceKey, gr.annot.members, gr.method.name, java.field.name, org.jetbrains.kotlin.idea.stubindex.KotlinPropertyShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelFunctionByPackageIndex, org.jetbrains.kotlin.idea.stubindex.KotlinFilePartClassIndex, gr.class.super, org.jetbrains.kotlin.idea.stubindex.KotlinOverridableInternalMembersShortNameIndex, gr.script.fqn, dom.elementClass, java.class.fqn, java.method.parameter.types, org.jetbrains.kotlin.idea.stubindex.KotlinTopLevelExtensionsByReceiverTypeIndex, org.jetbrains.kotlin.idea.stubindex.KotlinClassShortNameIndex, org.jetbrains.kotlin.idea.stubindex.KotlinProbablyNothingFunctionShortNameIndex}.
+2024-07-28 10:31:36,354 [   5449]   INFO - #JetprofileSource - License not found
+2024-07-28 10:31:36,356 [   5451]   INFO - #c.i.i.StartupUtil - notify that start-up thread is free
+2024-07-28 10:31:37,568 [   6663]   INFO - #c.i.o.a.i.PopupMenuPreloader - 2034 ms since showing to preload popup menu 'Help' at 'MainMenu' in 29 ms
+2024-07-28 10:31:37,668 [   6763]   INFO - #c.i.o.a.i.PopupMenuPreloader - 2138 ms since showing to preload popup menu 'File' at 'MainMenu' in 134 ms
+2024-07-28 10:31:42,817 [  11912]   INFO - #c.a.t.i.u.SdkComponentSource - Downloading https://dl.google.com/android/repository/addons_list-5.xml
+2024-07-28 10:31:53,013 [  22108]   INFO - #c.a.t.i.u.SdkComponentSource - IOException: https://dl.google.com/android/repository/addons_list-5.xml
+2024-07-28 10:31:53,014 [  22109]   INFO - #c.a.t.i.u.SdkComponentSource - java.net.SocketTimeoutException: Connect timed out
+2024-07-28 10:31:53,015 [  22110]   INFO - #c.a.t.i.u.SdkComponentSource - Downloading https://dl.google.com/android/repository/addons_list-4.xml
+2024-07-28 10:31:55,261 [  24356]   INFO - #c.j.r.f.FollowMeManager - Register new user 0:'houzi' with ClientId=ClientId(value=Host)
+2024-07-28 10:31:55,614 [  24709]   INFO - #c.i.p.i.a.w.LegacyBridgeArtifactManagerRedefiner - Using workspace model to open project
+2024-07-28 10:31:55,706 [  24801]   INFO - #c.j.r.p.c.t.i.DistributedTestHost - Host address=localhost/127.0.0.1
+2024-07-28 10:31:55,712 [  24807]   INFO - STDOUT - Info  | RdCoroutineScope          | 25:JobScheduler FJ pool 5/11 | RdCoroutineHost overridden 
+2024-07-28 10:31:55,801 [  24896]   INFO - #c.i.p.c.ProjectCodeStyleSettingsManager - Initialized from default code style settings.
+2024-07-28 10:31:55,907 [  25002]   INFO - #c.n.g.i.u.w.GPTRunnerWindowFactory - GPTRunnerWindowFactory init.
+2024-07-28 10:31:56,036 [  25131]   INFO - #c.i.w.i.i.WorkspaceModelImpl - Load workspace model from cache in 378 ms
+2024-07-28 10:31:56,091 [  25186]   INFO - #c.j.r.p.c.V.R - sessionStatus: null
+2024-07-28 10:31:56,092 [  25187]   INFO - #c.j.r.p.c.V.R - freeSessionRemainingTimeMs: null null
+2024-07-28 10:31:56,254 [  25349]   INFO - #c.i.i.n.e.NewToolbarRootPaneExtension - Show old main toolbar: false; show old navigation bar: true
+2024-07-28 10:31:56,255 [  25350]   INFO - #c.i.i.n.e.NewToolbarRootPaneExtension - Show new main toolbar: false
+2024-07-28 10:31:56,656 [  25751]   INFO - STDOUT - oh!
+2024-07-28 10:31:56,934 [  26029]   INFO - #k.c.CoroutineScope - process input line:  [node:internal/modules/cjs/loader:942,   throw err;,   ^, , Error: Cannot find module '/Users/houzi/.gpt-runner/GPT-Runner-0.0.3/start-server.mjs',     at Module._resolveFilename (node:internal/modules/cjs/loader:939:15),     at Module._load (node:internal/modules/cjs/loader:780:27),     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:77:12),     at node:internal/main/run_main_module:17:47 {,   code: 'MODULE_NOT_FOUND',,   requireStack: [], }, , Node.js v18.0.0]
+2024-07-28 10:31:56,934 [  26029]   INFO - #k.c.CoroutineScope - process input line:  []
+2024-07-28 10:31:57,004 [  26099]   INFO - #c.j.r.f.FollowMeManager - Register new user 0:'houzi' with ClientId=ClientId(value=Host)
+2024-07-28 10:31:57,063 [  26158]   INFO - #c.i.o.e.s.p.m.ExternalProjectsDataStorage - Load external projects data in 5 millis (read time: 2)
+2024-07-28 10:31:57,722 [  26817]   INFO - STDOUT - Initialize stderr logger, severity=LOGSEVERITY_DISABLE
+2024-07-28 10:31:58,307 [  27402]   WARN - #c.i.o.a.i.ActionUpdater - 216 ms to grab EDT for CWMTelephonyGroup#update@NavBarToolbar (com.jetbrains.rd.platform.codeWithMe.telephony.CWMTelephonyGroup)
+2024-07-28 10:31:58,321 [  27416]   INFO - #c.i.o.p.DumbServiceGuiTaskQueue - Running dumb mode task: OnDiskSharedIndexChunkLocator
+2024-07-28 10:31:58,331 [  27426]   INFO - #c.i.o.p.DumbServiceGuiTaskQueue - Running dumb mode task: UnindexedFilesUpdater[untitled]
+2024-07-28 10:31:58,347 [  27442]   INFO - #c.i.u.i.UnindexedFilesUpdater - Started scanning for indexing of untitled. Reason: On project open
+2024-07-28 10:31:58,492 [  27587]   INFO - #c.i.u.i.UnindexedFilesUpdater - Performing delayed pushing properties tasks for untitled took 143ms; general responsiveness: ok; EDT responsiveness: ok
+2024-07-28 10:31:58,548 [  27643]   INFO - #c.i.u.i.UnindexedFilesUpdater - Scanning of untitled uses 11 scanning threads
+2024-07-28 10:31:58,992 [  28087]   INFO - #c.i.i.s.IdeStartupScripts - 0 startup script(s) found
+2024-07-28 10:31:59,023 [  28118]   INFO - #c.i.o.a.i.PopupMenuPreloader - 3079 ms since showing to preload popup menu 'File' at 'MainMenu' in 26 ms
+2024-07-28 10:31:59,139 [  28234]   INFO - #c.i.o.a.i.PopupMenuPreloader - 3195 ms since showing to preload popup menu 'Edit' at 'MainMenu' in 142 ms
+2024-07-28 10:31:59,203 [  28298]   INFO - #c.i.o.a.i.PopupMenuPreloader - 3258 ms since showing to preload popup menu 'View' at 'MainMenu' in 205 ms
+2024-07-28 10:31:59,296 [  28391]   INFO - #c.i.o.a.i.PopupMenuPreloader - 3351 ms since showing to preload popup menu 'Navigate' at 'MainMenu' in 298 ms
+2024-07-28 10:31:59,380 [  28475]   INFO - #c.i.o.a.i.PopupMenuPreloader - 3435 ms since showing to preload popup menu 'Code' at 'MainMenu' in 382 ms
+2024-07-28 10:31:59,422 [  28517]   INFO - #c.i.o.a.i.PopupMenuPreloader - 3478 ms since showing to preload popup menu 'Build' at 'MainMenu' in 424 ms
+2024-07-28 10:31:59,454 [  28549]   INFO - #c.a.t.i.p.ProjectSystemService - DefaultProjectSystem project system has been detected
+2024-07-28 10:31:59,469 [  28564]   INFO - #c.i.o.a.i.PopupMenuPreloader - 3524 ms since showing to preload popup menu 'Refactor' at 'MainMenu' in 471 ms
+2024-07-28 10:31:59,501 [  28596]   INFO - #c.i.o.a.i.PopupMenuPreloader - 3556 ms since showing to preload popup menu 'Run' at 'MainMenu' in 503 ms
+2024-07-28 10:31:59,526 [  28621]   INFO - #c.i.o.a.i.PopupMenuPreloader - 3581 ms since showing to preload popup menu 'Tools' at 'MainMenu' in 528 ms
+2024-07-28 10:31:59,528 [  28623]   INFO - #c.i.o.a.i.PopupMenuPreloader - 3583 ms since showing to preload popup menu 'Window' at 'MainMenu' in 530 ms
+2024-07-28 10:31:59,530 [  28625]   INFO - #c.i.o.a.i.PopupMenuPreloader - 3585 ms since showing to preload popup menu 'Help' at 'MainMenu' in 531 ms
+2024-07-28 10:31:59,575 [  28670]   INFO - #c.i.o.f.i.FileEditorManagerImpl - Project opening took 3974 ms
+2024-07-28 10:31:59,722 [  28817]   INFO - #c.i.d.PerformanceWatcherImpl - Post-startup activities under progress took 2802ms; general responsiveness: ok; EDT responsiveness: 0/3 sluggish, 1/3 very slow
+2024-07-28 10:32:01,303 [  30398]   INFO - #c.i.u.i.UnindexedFilesUpdater - Scanning completed for untitled. Number of scanned files: 42859; Number of files for indexing: 0 took 2810ms; general responsiveness: ok; EDT responsiveness: ok
+2024-07-28 10:32:01,313 [  30408]   INFO - #c.i.u.i.UnindexedFilesUpdater - Finished for untitled. No files to index with loading content.
+2024-07-28 10:32:01,321 [  30416]   INFO - #c.i.o.p.DumbServiceGuiTaskQueue - Running dumb mode task: com.android.tools.idea.res.ResourceFolderRepositoryFileCacheImpl$PruneTask@1107d3e1
+2024-07-28 10:32:01,326 [  30421]   INFO - #c.i.o.p.DumbServiceGuiTaskQueue - Running dumb mode task: com.android.tools.idea.res.ResourceFolderRepositoryFileCacheImpl$ManageLruProjectFilesTask@5d5f461a
+2024-07-28 10:32:01,378 [  30473]   INFO - #c.i.o.p.DumbServiceImpl - updateFinished
+2024-07-28 10:32:01,389 [  30484]   INFO - #c.i.u.i.ProjectFileBasedIndexStartupActivity - Has changed files: true; project=Project(name=untitled, containerState=COMPONENT_CREATED, componentStore=/Users/houzi/IdeaProjects/untitled)
+2024-07-28 10:32:01,408 [  30503]   INFO - c.i.s.k.s.d.SpaceKtsFileDetector - SpaceKtsFileDetector
+2024-07-28 10:32:01,514 [  30609]   INFO - #c.i.o.p.DumbServiceGuiTaskQueue - Running dumb mode task: com.android.tools.idea.res.ResourceFolderRegistry$PopulateCachesTask@401e5f8e
+2024-07-28 10:32:01,526 [  30621]   INFO - #c.i.o.p.DumbServiceImpl - updateFinished
+2024-07-28 10:32:01,527 [  30622]   INFO - #c.i.u.i.ProjectFileBasedIndexStartupActivity - Has changed files: true; project=Project(name=untitled, containerState=COMPONENT_CREATED, componentStore=/Users/houzi/IdeaProjects/untitled)
+2024-07-28 10:32:01,573 [  30668]   INFO - #c.a.t.i.i.GMavenIndexRepository - Failed to refresh local disk cache:
+java.net.SocketTimeoutException: Connect timed out
+2024-07-28 10:32:01,574 [  30669]   INFO - #c.a.t.i.i.GMavenIndexRepository - Scheduled to retry refreshing com.android.tools.idea.imports.GMavenIndexRepository after 2024-07-28 11:32:01.
+2024-07-28 10:32:03,016 [  32111]   INFO - #c.a.t.i.u.SdkComponentSource - IOException: https://dl.google.com/android/repository/addons_list-4.xml
+2024-07-28 10:32:03,017 [  32112]   INFO - #c.a.t.i.u.SdkComponentSource - java.net.SocketTimeoutException: Connect timed out
+2024-07-28 10:32:03,019 [  32114]   INFO - #c.a.t.i.u.SdkComponentSource - Downloading https://dl.google.com/android/repository/addons_list-3.xml
+2024-07-28 10:32:04,432 [  33527]   INFO - #o.i.p.m.s.MarkdownSettings - Migrating Markdown settings
+2024-07-28 10:32:08,433 [  37528]   WARN - #c.i.d.MemorySizeConfigurator - The IDE is not configured for using custom VM options (jb.vmOptionsFile=null)
+java.io.IOException: The IDE is not configured for using custom VM options (jb.vmOptionsFile=null)
+	at com.intellij.diagnostic.VMOptions.setOptions(VMOptions.java:203)
+	at com.intellij.diagnostic.VMOptions.setOption(VMOptions.java:194)
+	at com.intellij.diagnostic.VMOptions.setOption(VMOptions.java:176)
+	at com.intellij.diagnostic.MemorySizeConfigurator.runActivity(MemorySizeConfigurator.kt:46)
+	at com.intellij.ide.startup.impl.StartupManagerImplKt.runStartupActivity(StartupManagerImpl.kt:511)
+	at com.intellij.ide.startup.impl.StartupManagerImplKt.access$runStartupActivity(StartupManagerImpl.kt:1)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$runBackgroundPostStartupActivities$1.run(StartupManagerImpl.kt:451)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$2(CoreProgressManager.java:188)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$executeProcessUnderProgress$12(CoreProgressManager.java:608)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:683)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.computeUnderProgress(CoreProgressManager.java:639)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:607)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:60)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:175)
+	at com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:365)
+	at com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:343)
+	at com.intellij.ide.startup.impl.StartupManagerImpl.runBackgroundPostStartupActivities(StartupManagerImpl.kt:444)
+	at com.intellij.ide.startup.impl.StartupManagerImpl.access$runBackgroundPostStartupActivities(StartupManagerImpl.kt:70)
+	at com.intellij.ide.startup.impl.StartupManagerImpl$scheduleBackgroundPostStartupActivities$1.run(StartupManagerImpl.kt:431)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at com.intellij.util.concurrency.SchedulingWrapper$MyScheduledFutureTask.run(SchedulingWrapper.java:223)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:702)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:699)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:399)
+	at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:699)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-07-28 10:32:10,310 [  39405]   INFO - #o.j.j.b.i.CompilerReferenceIndex - backward reference index version doesn't exist
+2024-07-28 10:32:10,313 [  39408]   INFO - #c.i.c.b.IsUpToDateCheckStartupActivity - suitable consumer is not found
+2024-07-28 10:32:10,318 [  39413]   INFO - #c.j.r.p.c.CodeWithMeCleanup - running activity to cleanup old thin clients... Root path is '/Users/houzi/Library/Caches/JetBrains'. JvmStartTimeMs=1722133890510
+2024-07-28 10:32:10,319 [  39414]   INFO - #c.j.r.p.c.CodeWithMeCleanup - found 0 Code With Me client system folders to check
+2024-07-28 10:32:10,321 [  39416]   INFO - #c.j.r.p.c.CodeWithMeCleanup - found 0 Code With Me client config folders to check
+2024-07-28 10:32:10,322 [  39417]   INFO - #c.j.r.p.c.CodeWithMeCleanup - keep only [] major versions
+2024-07-28 10:32:10,417 [  39512]   INFO - #c.i.w.i.i.j.s.DelayedProjectSynchronizer - Workspace model loaded from cache. Syncing real project state into workspace model in 90 ms. Thread[ApplicationImpl pooled thread 9,4,main]
+2024-07-28 10:32:12,033 [  41128]   INFO - STDERR - SLF4J: No SLF4J providers were found.
+2024-07-28 10:32:12,033 [  41128]   INFO - STDERR - SLF4J: Defaulting to no-operation (NOP) logger implementation
+2024-07-28 10:32:12,033 [  41128]   INFO - STDERR - SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+2024-07-28 10:32:12,034 [  41129]   INFO - STDERR - SLF4J: Class path contains SLF4J bindings targeting slf4j-api versions 1.7.x or earlier.
+2024-07-28 10:32:12,034 [  41129]   INFO - STDERR - SLF4J: Ignoring binding found at [jar:file:/Users/houzi/.gradle/caches/modules-2/files-2.1/com.jetbrains.intellij.idea/ideaIC/2022.2.5/836d1896d66b8d410f65d76e8cbc910b16d9edab/ideaIC-2022.2.5/lib/3rd-party-rt.jar!/org/slf4j/impl/StaticLoggerBinder.class]
+2024-07-28 10:32:12,034 [  41129]   INFO - STDERR - SLF4J: See https://www.slf4j.org/codes.html#ignoredBindings for an explanation.
+2024-07-28 10:32:13,021 [  42116]   INFO - #c.a.t.i.u.SdkComponentSource - IOException: https://dl.google.com/android/repository/addons_list-3.xml
+2024-07-28 10:32:13,022 [  42117]   INFO - #c.a.t.i.u.SdkComponentSource - java.net.SocketTimeoutException: Connect timed out
+2024-07-28 10:32:13,022 [  42117]   INFO - #c.a.t.i.u.SdkComponentSource - Downloading https://dl.google.com/android/repository/addons_list-2.xml
+2024-07-28 10:32:14,428 [  43523]   INFO - #c.i.o.a.i.PopupMenuPreloader - 16189 ms since showing to preload popup menu 'Project View Popup Menu' at 'ProjectViewPopup' in 194 ms
+2024-07-28 10:32:14,429 [  43524]   INFO - #c.i.o.a.i.PopupMenuPreloader - 16187 ms since showing to preload popup menu 'Project View Popup Menu' at 'ProjectViewPopup' in 195 ms
+2024-07-28 10:32:14,548 [  43643]   INFO - #c.i.o.a.i.PopupMenuPreloader - 11752 ms since showing to preload popup menu 'Editor Popup Menu' at 'EditorPopup' in 314 ms
+2024-07-28 10:32:14,549 [  43644]   INFO - #c.i.o.a.i.PopupMenuPreloader - 11431 ms since showing to preload popup menu 'Editor Popup Menu' at 'EditorPopup' in 315 ms
+2024-07-28 10:32:18,448 [  47543]   INFO - STDOUT - Cleaned response: // 冒泡排序示例
+2024-07-28 10:32:18,448 [  47543]   INFO - STDOUT - int[] array = {64, 34, 25, 12, 22, 11, 90};
+2024-07-28 10:32:18,448 [  47543]   INFO - STDOUT - int n = array.length;
+2024-07-28 10:32:18,448 [  47543]   INFO - STDOUT - for (int i = 0; i < n-1; i++) {
+2024-07-28 10:32:18,448 [  47543]   INFO - STDOUT -     for (int j = 0; j < n-i-1; j++) {
+2024-07-28 10:32:18,448 [  47543]   INFO - STDOUT -         if (array[j] > array[j+1]) {
+2024-07-28 10:32:18,449 [  47544]   INFO - STDOUT -             int temp = array[j];
+2024-07-28 10:32:18,449 [  47544]   INFO - STDOUT -             array[j] = array[j+1];
+2024-07-28 10:32:18,449 [  47544]   INFO - STDOUT -             array[j+1] = temp;
+2024-07-28 10:32:18,449 [  47544]   INFO - STDOUT -         }
+2024-07-28 10:32:18,449 [  47544]   INFO - STDOUT -     }
+2024-07-28 10:32:18,449 [  47544]   INFO - STDOUT - }
+2024-07-28 10:32:18,449 [  47544]   INFO - STDOUT - System.out.println("Sorted array:");
+2024-07-28 10:32:18,449 [  47544]   INFO - STDOUT - for (int num : array) {
+2024-07-28 10:32:18,449 [  47544]   INFO - STDOUT -     System.out.print(num + " ");
+2024-07-28 10:32:18,450 [  47545]   INFO - STDOUT - }
+2024-07-28 10:32:23,426 [  52521]   INFO - #c.a.t.i.u.SdkComponentSource - IOException: https://dl.google.com/android/repository/addons_list-2.xml
+2024-07-28 10:32:23,427 [  52522]   INFO - #c.a.t.i.u.SdkComponentSource - java.net.SocketTimeoutException: Connect timed out
+2024-07-28 10:32:23,428 [  52523]   INFO - #c.a.t.i.u.SdkComponentSource - Downloading https://dl.google.com/android/repository/addons_list-1.xml
+2024-07-28 10:32:31,537 [  60632]   INFO - #c.i.c.ComponentStoreImpl - Saving appFileTypeManager took 11 ms
+2024-07-28 10:32:31,872 [  60967]   INFO - #c.i.c.ComponentStoreImpl - Saving Project(name=untitled, containerState=COMPONENT_CREATED, componentStore=/Users/houzi/IdeaProjects/untitled)RunManager took 33 ms
+2024-07-28 10:32:33,429 [  62524]   INFO - #c.a.t.i.u.SdkComponentSource - IOException: https://dl.google.com/android/repository/addons_list-1.xml
+2024-07-28 10:32:33,429 [  62524]   INFO - #c.a.t.i.u.SdkComponentSource - java.net.SocketTimeoutException: Connect timed out
+2024-07-28 10:32:33,429 [  62524]   WARN - #c.a.t.i.u.SdkComponentSource - Failed to download any source lists!
+2024-07-28 10:32:33,433 [  62528]   INFO - #c.a.t.i.u.SdkComponentSource - Downloading https://dl.google.com/android/repository/repository2-3.xml
+2024-07-28 10:32:33,434 [  62529]   INFO - #c.a.t.i.u.SdkComponentSource - Downloading https://dl.google.com/android/repository/repository2-2.xml
+2024-07-28 10:32:33,883 [  62978]   INFO - #c.i.c.CompilerWorkspaceConfiguration - Available processors: 12
