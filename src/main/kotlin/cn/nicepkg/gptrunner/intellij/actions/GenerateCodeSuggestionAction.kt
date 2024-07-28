@@ -20,12 +20,13 @@ class GenerateCodeSuggestionAction : AnAction("GPT:代码提示") {
         val document = editor.document
         val offset = editor.caretModel.offset
 
-        val currentLineNumber = document.getLineNumber(offset) + 1
-        val previousCode = document.getText().substring(0, document.getLineStartOffset(currentLineNumber - 1))
+        // 获取光标前的内容
+        val textBeforeCursor = document.getText(TextRange(0, offset))
+        // 获取光标后的内容
+        val textAfterCursor = document.getText(TextRange(offset, document.textLength))
 
-        val context = """
-            $previousCode
-        """.trimIndent()
+        // 构建上下文，用 "|" 标记光标位置
+        val context = "$textBeforeCursor|$textAfterCursor"
 
         val langChainService = project.service<LangChainService>()
 
@@ -45,7 +46,7 @@ class GenerateCodeSuggestionAction : AnAction("GPT:代码提示") {
                 editor.scrollingModel.scrollToCaret(ScrollType.MAKE_VISIBLE)
 
                 // 获取从文件开始到新插入代码末尾的所有内容
-                val textToFormat = document.getText().substring(0, newOffset)
+                val textToFormat = document.getText(TextRange(0, newOffset))
 
                 // 格式化代码
                 val formattedText = langChainService.formatCode(textToFormat)
